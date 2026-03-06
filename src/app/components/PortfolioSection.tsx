@@ -27,13 +27,14 @@ const projects = [
     color: "#6366f1",
   },
   {
-    img: portfolioImg3,
+    img: "/img-portfolio-travel.png",
     category: "Tour & Travel",
-    title: "Bali Sacred Tours",
+    title: "TravelJimb",
     location: "Bali",
-    desc: "Landing page tour operator dengan paket wisata terstruktur dan CTA yang kuat.",
-    result: "+80% konversi leads",
-    color: "#f59e0b",
+    desc: "Website driver pribadi Bali dengan desain premium dan landing page informasi wisata.",
+    result: "Live Project",
+    color: "#0ea5e9",
+    link: "https://traveljimb.vercel.app/",
   },
 ];
 
@@ -44,7 +45,7 @@ function ProjectCard({
   project: (typeof projects)[0];
   index: number;
 }) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLAnchorElement>(null);
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start end", "end start"],
@@ -52,9 +53,12 @@ function ProjectCard({
   const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   return (
-    <motion.div
+    <motion.a
+      href={project.link || "#"}
+      target={project.link ? "_blank" : undefined}
+      rel={project.link ? "noopener noreferrer" : undefined}
       ref={cardRef}
-      className="group relative rounded-3xl overflow-hidden bg-[#111] cursor-default"
+      className={`group relative rounded-3xl overflow-hidden bg-[#111] ${project.link ? "cursor-pointer" : "cursor-default"}`}
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -138,7 +142,7 @@ function ProjectCard({
           </span>
         </div>
       </div>
-    </motion.div>
+    </motion.a>
   );
 }
 
