@@ -64,6 +64,7 @@ export function LandingPage() {
                         <img
                             src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080&q=80"
                             alt="Landing Page Design Portfolio"
+                            fetchPriority="high"
                             className="w-full aspect-[4/3] object-cover rounded-3xl border border-white/10 shadow-2xl relative z-10"
                         />
                     </motion.div>

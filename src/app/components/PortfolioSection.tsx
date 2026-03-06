@@ -27,7 +27,7 @@ const projects = [
     color: "#6366f1",
   },
   {
-    img: "/img-portfolio-travel.png",
+    img: "/img-portfolio-travel.webp",
     category: "Tour & Travel",
     title: "TravelJimb",
     location: "Bali",
@@ -71,6 +71,7 @@ function ProjectCard({
           <ImageWithFallback
             src={project.img}
             alt={project.title}
+            loading="lazy"
             className="w-full h-full object-cover scale-110 group-hover:scale-105 transition-transform duration-700"
           />
         </motion.div>

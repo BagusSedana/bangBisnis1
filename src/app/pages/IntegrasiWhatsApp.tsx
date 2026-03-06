@@ -64,6 +64,7 @@ export function IntegrasiWhatsApp() {
                         <img
                             src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080&q=80"
                             alt="WhatsApp Integration on Websites"
+                            fetchPriority="high"
                             className="w-full aspect-[4/3] object-cover rounded-3xl border border-white/10 shadow-2xl relative z-10"
                         />
                     </motion.div>

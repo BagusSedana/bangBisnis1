@@ -139,6 +139,7 @@ export function ApproachSection() {
               <ImageWithFallback
                 src={workImg}
                 alt="Creative process"
+                loading="lazy"
                 className="w-full h-full object-cover scale-110"
               />
             </motion.div>
