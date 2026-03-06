@@ -374,8 +374,8 @@ export function PricingSection() {
                     {/* Basic Care */}
                     <label
                       className={`flex items-start gap-3 cursor-pointer p-3 rounded-xl border transition-all duration-300 ${selectedMaintenance[i] === 'basic'
-                          ? 'border-emerald-500/40 bg-emerald-500/5'
-                          : 'border-white/10 hover:border-white/20 group-hover:border-black/10 group-hover:hover:border-black/20'
+                        ? 'border-emerald-500/40 bg-emerald-500/5'
+                        : 'border-white/10 hover:border-white/20 group-hover:border-black/10 group-hover:hover:border-black/20'
                         }`}
                       onClick={(e) => {
                         e.preventDefault();
@@ -387,16 +387,16 @@ export function PricingSection() {
                     >
                       <div
                         className={`mt-0.5 w-4 h-4 rounded border flex items-center justify-center shrink-0 transition-colors duration-300 ${selectedMaintenance[i] === 'basic'
-                            ? 'bg-emerald-500 border-emerald-500 text-[#0a0a0a]'
-                            : 'border-white/30 text-transparent group-hover:border-black/20'
+                          ? 'bg-emerald-500 border-emerald-500 text-[#0a0a0a]'
+                          : 'border-white/30 text-transparent group-hover:border-black/20'
                           }`}
                       >
                         <Check size={10} strokeWidth={4} />
                       </div>
                       <div className="flex-1 select-none">
                         <p className={`text-[0.8rem] font-medium leading-tight mb-1 transition-colors ${(plan as any).popular
-                            ? (selectedMaintenance[i] === 'basic' ? "text-[#333]" : "text-[#777]")
-                            : (selectedMaintenance[i] === 'basic' ? "text-white/90 group-hover:text-[#333]" : "text-white/60 group-hover:text-[#777]")
+                          ? (selectedMaintenance[i] === 'basic' ? "text-[#333]" : "text-[#777]")
+                          : (selectedMaintenance[i] === 'basic' ? "text-white/90 group-hover:text-[#333]" : "text-white/60 group-hover:text-[#777]")
                           }`} style={{ fontFamily: "'Inter', sans-serif" }}>
                           Basic Care
                         </p>
@@ -410,8 +410,8 @@ export function PricingSection() {
                     {/* Advanced Care */}
                     <label
                       className={`flex items-start gap-3 cursor-pointer p-3 rounded-xl border transition-all duration-300 ${selectedMaintenance[i] === 'advanced'
-                          ? 'border-emerald-500/40 bg-emerald-500/5'
-                          : 'border-white/10 hover:border-white/20 group-hover:border-black/10 group-hover:hover:border-black/20'
+                        ? 'border-emerald-500/40 bg-emerald-500/5'
+                        : 'border-white/10 hover:border-white/20 group-hover:border-black/10 group-hover:hover:border-black/20'
                         }`}
                       onClick={(e) => {
                         e.preventDefault();
@@ -423,8 +423,8 @@ export function PricingSection() {
                     >
                       <div
                         className={`mt-0.5 w-4 h-4 rounded border flex items-center justify-center shrink-0 transition-colors duration-300 ${selectedMaintenance[i] === 'advanced'
-                            ? 'bg-emerald-500 border-emerald-500 text-[#0a0a0a]'
-                            : 'border-white/30 text-transparent group-hover:border-black/20'
+                          ? 'bg-emerald-500 border-emerald-500 text-[#0a0a0a]'
+                          : 'border-white/30 text-transparent group-hover:border-black/20'
                           }`}
                       >
                         <Check size={10} strokeWidth={4} />
@@ -432,8 +432,8 @@ export function PricingSection() {
                       <div className="flex-1 select-none">
                         <div className="flex items-center gap-2 mb-1">
                           <p className={`text-[0.8rem] font-medium leading-tight transition-colors ${(plan as any).popular
-                              ? (selectedMaintenance[i] === 'advanced' ? "text-[#333]" : "text-[#777]")
-                              : (selectedMaintenance[i] === 'advanced' ? "text-white/90 group-hover:text-[#333]" : "text-white/60 group-hover:text-[#777]")
+                            ? (selectedMaintenance[i] === 'advanced' ? "text-[#333]" : "text-[#777]")
+                            : (selectedMaintenance[i] === 'advanced' ? "text-white/90 group-hover:text-[#333]" : "text-white/60 group-hover:text-[#777]")
                             }`} style={{ fontFamily: "'Inter', sans-serif" }}>
                             Advanced Care
                           </p>
@@ -498,7 +498,7 @@ export function PricingSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`relative p-6 md:p-8 rounded-[1.5rem] border transition-colors duration-500 ${(plan as any).popular ? "bg-white/[0.04] border-emerald-500/30 hover:bg-white/[0.06]" : "bg-white/[0.02] border-white/[0.05] hover:bg-white/[0.04]"}`}
+                className={`flex flex-col relative p-6 md:p-8 rounded-[1.5rem] border transition-colors duration-500 ${(plan as any).popular ? "bg-white/[0.04] border-emerald-500/30 hover:bg-white/[0.06]" : "bg-white/[0.02] border-white/[0.05] hover:bg-white/[0.04]"}`}
               >
                 <div className="flex justify-between items-start mb-5">
                   <div>
@@ -535,18 +535,20 @@ export function PricingSection() {
                   </div>
                 )}
 
-                <motion.button
-                  onClick={() => handleWaClick(plan.name, true)}
-                  className={`w-full py-3.5 rounded-xl text-[13px] tracking-[0.02em] transition-all duration-300 relative overflow-hidden group/btn ${(plan as any).popular
-                    ? "bg-white/[0.08] text-white hover:bg-white/[0.12]"
-                    : "bg-white/[0.03] text-white/50 border border-white/[0.05] hover:bg-white/[0.08] hover:text-white"
-                    }`}
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <span className="relative z-10">Pilih Paket</span>
-                </motion.button>
+                <div className="mt-auto">
+                  <motion.button
+                    onClick={() => handleWaClick(plan.name, true)}
+                    className={`w-full py-3.5 rounded-xl text-[13px] tracking-[0.02em] transition-all duration-300 relative overflow-hidden group/btn ${(plan as any).popular
+                      ? "bg-white/[0.08] text-white hover:bg-white/[0.12]"
+                      : "bg-white/[0.03] text-white/50 border border-white/[0.05] hover:bg-white/[0.08] hover:text-white"
+                      }`}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="relative z-10">Pilih Paket</span>
+                  </motion.button>
+                </div>
               </motion.div>
             ))}
           </div>
