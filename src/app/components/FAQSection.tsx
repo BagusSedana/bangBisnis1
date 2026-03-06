@@ -40,11 +40,11 @@ export function FAQSection() {
         className="absolute -left-10 top-1/2 -translate-y-1/2 text-[20rem] md:text-[35rem] tracking-[-0.05em] text-[#f0efe9] select-none pointer-events-none"
         style={{ fontFamily: "'Urbanist', sans-serif", lineHeight: 0.8 }}
       >
-        07
+        08
       </motion.span>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-        <SectionLabel number="07" label="FAQ" />
+        <SectionLabel number="08" label="FAQ" />
 
         {/* Header */}
         <div className="mb-16 md:mb-24">
@@ -133,8 +133,8 @@ export function FAQSection() {
                   {/* Toggle icon */}
                   <motion.div
                     className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-all duration-500 ${isOpen
-                        ? "bg-[#0a0a0a]"
-                        : "bg-[#f0f0ed] group-hover:bg-[#0a0a0a]"
+                      ? "bg-[#0a0a0a]"
+                      : "bg-[#f0f0ed] group-hover:bg-[#0a0a0a]"
                       }`}
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -142,8 +142,8 @@ export function FAQSection() {
                     <Plus
                       size={16}
                       className={`transition-colors duration-500 ${isOpen
-                          ? "text-white"
-                          : "text-[#999] group-hover:text-white"
+                        ? "text-white"
+                        : "text-[#999] group-hover:text-white"
                         }`}
                     />
                   </motion.div>

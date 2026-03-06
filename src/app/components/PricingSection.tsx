@@ -112,11 +112,11 @@ export function PricingSection() {
         className="absolute -right-10 top-1/2 -translate-y-1/2 text-[20rem] md:text-[35rem] tracking-[-0.05em] text-white/[0.015] select-none pointer-events-none"
         style={{ fontFamily: "'Urbanist', sans-serif", lineHeight: 0.8, x: bgX }}
       >
-        06
+        07
       </motion.span>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-        <SectionLabel number="06" label="Harga" light />
+        <SectionLabel number="07" label="Harga" light />
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-6">

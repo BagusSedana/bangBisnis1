@@ -14,6 +14,7 @@ import { CTASection } from "./components/CTASection";
 import { Footer } from "./components/Footer";
 import { JasaWebsiteBali } from "./pages/JasaWebsiteBali";
 import ScrollToTop from "./components/ScrollToTop";
+import { TestimonialsSection } from "./components/TestimonialsSection";
 import { CompanyProfile } from "./pages/CompanyProfile";
 import { LandingPage } from "./pages/LandingPage";
 import { WebsiteUMKM } from "./pages/WebsiteUMKM";
@@ -61,6 +62,7 @@ function HomePage() {
       <ServicesSection />
       <ProcessSection />
       <PortfolioSection />
+      <TestimonialsSection />
       <PricingSection />
       <FAQSection />
       <CTASection />
