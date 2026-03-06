@@ -5,81 +5,100 @@ import { Check, Sparkles } from "lucide-react";
 
 const plans = [
   {
-    name: "Professional",
-    price: "2.000.000",
-    desc: "Untuk UMKM yang ingin mulai memiliki website profesional.",
+    name: "Starter Website",
+    price: "1.500.000",
+    desc: "Cocok untuk UMKM yang ingin mulai terlihat profesional di internet.",
     features: [
-      "Hingga 5 halaman utama (Home, Tentang, Layanan, dll.)",
-      "Desain minimalis & responsif (mobile-friendly)",
-      "Struktur konten yang rapi & terarah",
-      "Integrasi WhatsApp",
-      "1x revisi penyempurnaan",
-      "Panduan penggunaan",
+      "1 halaman website profesional (landing page)",
+      "Desain modern dan mobile friendly",
+      "Tombol langsung ke WhatsApp",
+      "Integrasi Google Maps lokasi bisnis",
+      "Optimasi kecepatan website",
+      "Setup Google Business Profile",
+      "Setup SEO dasar agar mudah ditemukan di Google",
+      "Bantuan upload konten awal (foto, teks, dll)",
+      "Gratis domain .web.id 1 tahun",
+      "Gratis hosting 1 tahun",
     ],
-    note: "Cocok untuk bisnis yang ingin mulai tampil lebih serius secara online.",
+    note: "Bisnis sudah punya website resmi dan mudah ditemukan pelanggan.",
   },
   {
-    name: "Growth",
-    price: "3.500.000",
-    desc: "Untuk bisnis yang ingin meningkatkan kredibilitas dan terlihat lebih profesional dibanding kompetitor.",
+    name: "Business Website",
+    price: "2.750.000",
+    desc: "Untuk bisnis yang ingin terlihat lebih terpercaya dan informatif.",
     popular: true,
     features: [
-      "Hingga 10 halaman terstruktur",
-      "Desain responsif & tampilan premium",
-      "Penyesuaian visual sesuai brand",
-      "Galeri foto / portfolio",
-      "Integrasi WhatsApp & Google Maps",
-      "Setup Google Analytics",
-      "2x revisi penyempurnaan",
+      "Hingga 5 halaman website",
+      "Desain profesional dan responsif",
+      "Struktur website yang rapi dan mudah dipahami",
+      "Integrasi WhatsApp chat langsung",
+      "Integrasi Google Maps",
+      "Optimasi kecepatan website",
+      "Setup Google Analytics (tracking pengunjung)",
+      "SEO dasar pada setiap halaman",
+      "Setup Google Business Profile",
+      "Bantuan upload konten awal",
+      "Gratis domain .web.id 1 tahun",
+      "Gratis hosting 1 tahun",
     ],
-    note: "Dirancang untuk bisnis yang ingin tampil lebih meyakinkan dan terstruktur.",
+    note: "Website terlihat lebih profesional dan meningkatkan kepercayaan pelanggan.",
   },
   {
-    name: "Custom Solution",
-    price: "5.000.000",
-    pricePrefix: "Mulai",
-    desc: "Untuk kebutuhan bisnis dengan fitur dan pengembangan lebih lanjut.",
+    name: "Growth Website",
+    price: "4.500.000",
+    desc: "Untuk bisnis yang ingin mulai mendapatkan pelanggan dari Google.",
     features: [
-      "Struktur halaman sesuai kebutuhan",
-      "Desain kustom penuh",
-      "Pengembangan fitur khusus",
-      "Revisi hingga finalisasi",
-      "Konsultasi arah digital",
+      "Hingga 10 halaman website",
+      "Struktur website SEO-friendly",
+      "Halaman layanan yang dioptimasi untuk pencarian Google",
+      "Blog / artikel untuk meningkatkan trafik",
+      "Integrasi WhatsApp & form lead pelanggan",
+      "Setup Google Analytics + Search Console",
+      "Optimasi kecepatan website",
+      "Setup Google Business Profile",
+      "Optimasi SEO dasar pada semua halaman",
+      "Bantuan upload konten awal",
+      "Gratis domain .com / .id 1 tahun",
+      "Gratis hosting 1 tahun",
     ],
-    note: "Cocok untuk bisnis yang membutuhkan solusi lebih fleksibel dan scalable.",
   },
 ];
 
 const maintenancePlans = [
   {
     name: "Basic Care",
-    price: "350.000",
+    price: "250.000",
     period: "/ bulan",
+    desc: "Untuk memastikan website tetap aktif dan bisa digunakan pelanggan tanpa gangguan.",
     features: [
-      "Update minor konten (teks/foto)",
-      "Backup rutin",
-      "Monitoring performa dasar",
-      "Dukungan teknis ringan",
+      "Perubahan kecil konten (teks atau foto) hingga 2x per bulan",
+      "Backup website setiap minggu",
+      "Monitoring uptime website",
+      "Perbaikan error ringan jika terjadi masalah",
+      "Dukungan teknis via WhatsApp",
     ],
+    note: "Website tetap berjalan lancar tanpa harus mengurus hal teknis.",
   },
   {
     name: "Advanced Care",
-    price: "750.000",
+    price: "650.000",
     period: "/ bulan",
     popular: true,
+    desc: "Untuk bisnis yang ingin website terus berkembang dan tetap optimal.",
     features: [
-      "Update konten rutin",
-      "Optimasi performa",
-      "Monitoring keamanan",
-      "Backup terjadwal",
-      "Laporan perkembangan",
-      "Prioritas dukungan",
+      "Update konten rutin (hingga 5x per bulan)",
+      "Backup website terjadwal",
+      "Monitoring keamanan website",
+      "Optimasi kecepatan website",
+      "Laporan performa website bulanan",
+      "Prioritas support jika terjadi kendala",
     ],
   },
 ];
 
 export function PricingSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [includeMaintenance, setIncludeMaintenance] = useState<Record<number, boolean>>({});
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -91,14 +110,16 @@ export function PricingSection() {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleWaClick = (packageName: string, isMaintenance: boolean = false) => {
+  const handleWaClick = (packageName: string, isMaintenance: boolean = false, index?: number) => {
     const phoneNumber = "6287701785344";
     let message = "";
 
     if (isMaintenance) {
       message = `Halo BangBisnis, saya tertarik dengan layanan *${packageName}* (Dukungan & Pemeliharaan). Boleh saya konsultasi dulu mengenai kebutuhan website saya?`;
     } else {
-      message = `Halo BangBisnis, saya tertarik dengan Layanan Jasa Website paket *${packageName}*. Boleh saya konsultasi dulu mengenai kebutuhan website saya?`;
+      const withMaintenance = index !== undefined && includeMaintenance[index];
+      const maintenanceText = withMaintenance ? " + Dukungan & Pemeliharaan" : "";
+      message = `Halo BangBisnis, saya tertarik dengan Layanan Jasa Website paket *${packageName}*${maintenanceText}. Boleh saya konsultasi dulu mengenai kebutuhan website saya?`;
     }
 
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -260,13 +281,13 @@ export function PricingSection() {
                   </h3>
 
                   <div className="flex items-baseline gap-1.5 mb-1">
-                    {plan.pricePrefix && (
+                    {(plan as any).pricePrefix && (
                       <span
-                        className={`text-[0.75rem] transition-colors duration-500 ${plan.popular ? "text-[#ccc]" : "text-white/40 group-hover:text-[#ccc]"
+                        className={`text-[0.75rem] transition-colors duration-500 ${(plan as any).popular ? "text-[#ccc]" : "text-white/40 group-hover:text-[#ccc]"
                           }`}
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        {plan.pricePrefix}
+                        {(plan as any).pricePrefix}
                       </span>
                     )}
                     <motion.span
@@ -334,15 +355,38 @@ export function PricingSection() {
                   </ul>
 
                   {(plan as any).note && (
-                    <div className={`mb-8 p-4 rounded-xl transition-colors duration-500 ${plan.popular ? "bg-[#f5f5f5]" : "bg-white/[0.02] border border-white/[0.04]"}`}>
-                      <p className={`text-[0.8rem] italic leading-relaxed ${plan.popular ? "text-[#666]" : "text-[#999]"}`} style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <div className={`mb-8 p-4 rounded-xl transition-colors duration-500 ${(plan as any).popular ? "bg-[#f5f5f5]" : "bg-white/[0.02] border border-white/[0.04]"}`}>
+                      <p className={`text-[0.8rem] italic leading-relaxed ${(plan as any).popular ? "text-[#666]" : "text-[#999]"}`} style={{ fontFamily: "'Inter', sans-serif" }}>
                         "{(plan as any).note}"
                       </p>
                     </div>
                   )}
 
+                  {/* Optional Maintenance toggle */}
+                  <div className="mb-6">
+                    <label
+                      className={`flex items-start gap-3 cursor-pointer p-3 rounded-xl border transition-all duration-300 ${includeMaintenance[i] ? 'border-emerald-500/40 bg-emerald-500/5' : 'border-white/10 hover:border-white/20'}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIncludeMaintenance(prev => ({ ...prev, [i]: !prev[i] }));
+                      }}
+                    >
+                      <div
+                        className={`mt-0.5 w-4 h-4 rounded border flex items-center justify-center shrink-0 transition-colors ${includeMaintenance[i] ? 'bg-emerald-500 border-emerald-500 text-[#0a0a0a]' : 'border-white/30 text-transparent'}`}
+                      >
+                        <Check size={10} strokeWidth={4} />
+                      </div>
+                      <div className="flex-1 select-none">
+                        <p className={`text-[0.82rem] font-medium leading-tight mb-1 transition-colors ${(plan as any).popular ? (includeMaintenance[i] ? "text-[#333]" : "text-[#777]") : (includeMaintenance[i] ? "text-white/90" : "text-white/60")}`} style={{ fontFamily: "'Inter', sans-serif" }}>
+                          Tambah Dukungan & Pemeliharaan
+                        </p>
+                        <p className={`text-[0.7rem] transition-colors ${(plan as any).popular ? "text-[#999]" : "text-white/40"}`} style={{ fontFamily: "'Inter', sans-serif" }}>+Rp 250.000 / bulan</p>
+                      </div>
+                    </label>
+                  </div>
+
                   <motion.button
-                    onClick={() => handleWaClick(plan.name)}
+                    onClick={() => handleWaClick(plan.name, false, i)}
                     className={`w-full py-4 rounded-full text-[13px] tracking-[0.02em] transition-all duration-500 relative overflow-hidden group/btn ${plan.popular
                       ? "bg-[#0a0a0a] text-white"
                       : "bg-white/[0.06] text-white/50 border border-white/[0.08] group-hover:bg-[#0a0a0a] group-hover:text-white group-hover:border-transparent"
@@ -394,13 +438,18 @@ export function PricingSection() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className={`relative p-6 md:p-8 rounded-[1.5rem] border transition-colors duration-500 ${(plan as any).popular ? "bg-white/[0.04] border-emerald-500/30 hover:bg-white/[0.06]" : "bg-white/[0.02] border-white/[0.05] hover:bg-white/[0.04]"}`}
               >
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex justify-between items-start mb-5">
                   <div>
                     <h4 className="text-white/80 text-lg mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>{plan.name}</h4>
-                    <div className="flex items-baseline gap-1" style={{ fontFamily: "'Urbanist', sans-serif" }}>
+                    <div className="flex items-baseline gap-1 mb-2" style={{ fontFamily: "'Urbanist', sans-serif" }}>
                       <span className="text-white text-2xl tracking-[-0.02em]">Rp {plan.price}</span>
                       <span className="text-white/40 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>{plan.period}</span>
                     </div>
+                    {plan.desc && (
+                      <p className="text-white/50 text-[0.82rem] leading-relaxed max-w-[90%]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        {plan.desc}
+                      </p>
+                    )}
                   </div>
                   {(plan as any).popular && (
                     <span className="text-[10px] tracking-[0.1em] uppercase bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/30 font-medium">Bestseller</span>
@@ -415,6 +464,14 @@ export function PricingSection() {
                     </li>
                   ))}
                 </ul>
+
+                {(plan as any).note && (
+                  <div className="mt-auto mb-8 p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.03]">
+                    <p className="text-[#999] text-[0.78rem] italic leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      "{(plan as any).note}"
+                    </p>
+                  </div>
+                )}
 
                 <motion.button
                   onClick={() => handleWaClick(plan.name, true)}
