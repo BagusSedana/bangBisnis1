@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://bangbisnis.id/</loc>
+    <loc>https://bangbisnis.web.id/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-03-06</lastmod>
@@ -10,7 +10,7 @@
 
   <!-- Dedicated SEO Landing Page -->
   <url>
-    <loc>https://bangbisnis.id/jasa-website-bali</loc>
+    <loc>https://bangbisnis.web.id/jasa-website-bali</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-03-06</lastmod>
@@ -18,25 +18,25 @@
 
   <!-- Service Pages -->
   <url>
-    <loc>https://bangbisnis.id/layanan/company-profile</loc>
+    <loc>https://bangbisnis.web.id/layanan/company-profile</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-03-06</lastmod>
   </url>
   <url>
-    <loc>https://bangbisnis.id/layanan/landing-page</loc>
+    <loc>https://bangbisnis.web.id/layanan/landing-page</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-03-06</lastmod>
   </url>
   <url>
-    <loc>https://bangbisnis.id/layanan/website-umkm</loc>
+    <loc>https://bangbisnis.web.id/layanan/website-umkm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-03-06</lastmod>
   </url>
   <url>
-    <loc>https://bangbisnis.id/layanan/integrasi-whatsapp</loc>
+    <loc>https://bangbisnis.web.id/layanan/integrasi-whatsapp</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-03-06</lastmod>
@@ -44,25 +44,25 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://bangbisnis.id/blog</loc>
+    <loc>https://bangbisnis.web.id/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <lastmod>2026-03-06</lastmod>
   </url>
   <url>
-    <loc>https://bangbisnis.id/blog/biaya-website-warung-makan-bali</loc>
+    <loc>https://bangbisnis.web.id/blog/biaya-website-warung-makan-bali</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <lastmod>2026-03-06</lastmod>
   </url>
   <url>
-    <loc>https://bangbisnis.id/blog/alasan-umkm-bali-wajib-punya-website-2026</loc>
+    <loc>https://bangbisnis.web.id/blog/alasan-umkm-bali-wajib-punya-website-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <lastmod>2026-03-06</lastmod>
   </url>
   <url>
-    <loc>https://bangbisnis.id/blog/website-vs-instagram-bisnis-kuliner-bali</loc>
+    <loc>https://bangbisnis.web.id/blog/website-vs-instagram-bisnis-kuliner-bali</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <lastmod>2026-03-06</lastmod>
