@@ -18,6 +18,8 @@ import { CompanyProfile } from "./pages/CompanyProfile";
 import { LandingPage } from "./pages/LandingPage";
 import { WebsiteUMKM } from "./pages/WebsiteUMKM";
 import { IntegrasiWhatsApp } from "./pages/IntegrasiWhatsApp";
+import { BlogPage } from "./pages/BlogPage";
+import { BlogPost } from "./pages/BlogPost";
 
 function FloatingWhatsApp() {
   return (
@@ -79,6 +81,8 @@ export default function App() {
         <Route path="/layanan/landing-page" element={<LandingPage />} />
         <Route path="/layanan/website-umkm" element={<WebsiteUMKM />} />
         <Route path="/layanan/integrasi-whatsapp" element={<IntegrasiWhatsApp />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router";
 
 const links = [
   { label: "Layanan", id: "layanan" },
@@ -104,6 +105,28 @@ export function Footer() {
                 />
               </motion.button>
             ))}
+            {/* Blog link */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: links.length * 0.05 }}
+            >
+              <Link
+                to="/blog"
+                className="text-[13px] text-white/60 hover:text-white/80 transition-colors duration-300 relative group flex items-center gap-1.5"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Blog
+                <span className="text-emerald-500 text-[9px] font-bold tracking-wider">NEW</span>
+                <motion.span
+                  className="absolute -bottom-1 left-0 h-px bg-emerald-500/50"
+                  initial={{ width: 0 }}
+                  whileHover={{ width: "100%" }}
+                  transition={{ duration: 0.3 }}
+                />
+              </Link>
+            </motion.div>
           </div>
         </div>
 
