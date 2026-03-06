@@ -98,7 +98,7 @@ const maintenancePlans = [
 
 export function PricingSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [includeMaintenance, setIncludeMaintenance] = useState<Record<number, boolean>>({});
+  const [selectedMaintenance, setSelectedMaintenance] = useState<Record<number, string>>({});
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -117,8 +117,11 @@ export function PricingSection() {
     if (isMaintenance) {
       message = `Halo BangBisnis, saya tertarik dengan layanan *${packageName}* (Dukungan & Pemeliharaan). Boleh saya konsultasi dulu mengenai kebutuhan website saya?`;
     } else {
-      const withMaintenance = index !== undefined && includeMaintenance[index];
-      const maintenanceText = withMaintenance ? " + Dukungan & Pemeliharaan" : "";
+      const maintenanceType = index !== undefined ? selectedMaintenance[index] : null;
+      let maintenanceText = "";
+      if (maintenanceType === 'basic') maintenanceText = " + Basic Care";
+      if (maintenanceType === 'advanced') maintenanceText = " + Advanced Care";
+
       message = `Halo BangBisnis, saya tertarik dengan Layanan Jasa Website paket *${packageName}*${maintenanceText}. Boleh saya konsultasi dulu mengenai kebutuhan website saya?`;
     }
 
@@ -355,32 +358,91 @@ export function PricingSection() {
                   </ul>
 
                   {(plan as any).note && (
-                    <div className={`mb-8 p-4 rounded-xl transition-colors duration-500 ${(plan as any).popular ? "bg-[#f5f5f5]" : "bg-white/[0.02] border border-white/[0.04]"}`}>
-                      <p className={`text-[0.8rem] italic leading-relaxed ${(plan as any).popular ? "text-[#666]" : "text-[#999]"}`} style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <div className={`mb-8 p-4 rounded-xl transition-colors duration-500 ${(plan as any).popular ? "bg-[#f5f5f5]" : "bg-white/[0.02] border border-white/[0.04] group-hover:bg-[#f5f5f5] group-hover:border-transparent"}`}>
+                      <p className={`text-[0.8rem] italic leading-relaxed ${(plan as any).popular ? "text-[#666]" : "text-[#999] group-hover:text-[#666]"}`} style={{ fontFamily: "'Inter', sans-serif" }}>
                         "{(plan as any).note}"
                       </p>
                     </div>
                   )}
 
-                  {/* Optional Maintenance toggle */}
-                  <div className="mb-6">
+                  {/* Maintenance toggles */}
+                  <div className="mb-6 space-y-2">
+                    <p className={`text-[0.75rem] px-1 mb-2 font-medium transition-colors ${(plan as any).popular ? "text-[#888]" : "text-white/40 group-hover:text-[#888]"}`} style={{ fontFamily: "'Inter', sans-serif" }}>
+                      Tambahan Opsional:
+                    </p>
+
+                    {/* Basic Care */}
                     <label
-                      className={`flex items-start gap-3 cursor-pointer p-3 rounded-xl border transition-all duration-300 ${includeMaintenance[i] ? 'border-emerald-500/40 bg-emerald-500/5' : 'border-white/10 hover:border-white/20'}`}
+                      className={`flex items-start gap-3 cursor-pointer p-3 rounded-xl border transition-all duration-300 ${selectedMaintenance[i] === 'basic'
+                          ? 'border-emerald-500/40 bg-emerald-500/5'
+                          : 'border-white/10 hover:border-white/20 group-hover:border-black/10 group-hover:hover:border-black/20'
+                        }`}
                       onClick={(e) => {
                         e.preventDefault();
-                        setIncludeMaintenance(prev => ({ ...prev, [i]: !prev[i] }));
+                        setSelectedMaintenance(prev => ({
+                          ...prev,
+                          [i]: prev[i] === 'basic' ? '' : 'basic'
+                        }));
                       }}
                     >
                       <div
-                        className={`mt-0.5 w-4 h-4 rounded border flex items-center justify-center shrink-0 transition-colors ${includeMaintenance[i] ? 'bg-emerald-500 border-emerald-500 text-[#0a0a0a]' : 'border-white/30 text-transparent'}`}
+                        className={`mt-0.5 w-4 h-4 rounded border flex items-center justify-center shrink-0 transition-colors duration-300 ${selectedMaintenance[i] === 'basic'
+                            ? 'bg-emerald-500 border-emerald-500 text-[#0a0a0a]'
+                            : 'border-white/30 text-transparent group-hover:border-black/20'
+                          }`}
                       >
                         <Check size={10} strokeWidth={4} />
                       </div>
                       <div className="flex-1 select-none">
-                        <p className={`text-[0.82rem] font-medium leading-tight mb-1 transition-colors ${(plan as any).popular ? (includeMaintenance[i] ? "text-[#333]" : "text-[#777]") : (includeMaintenance[i] ? "text-white/90" : "text-white/60")}`} style={{ fontFamily: "'Inter', sans-serif" }}>
-                          Tambah Dukungan & Pemeliharaan
+                        <p className={`text-[0.8rem] font-medium leading-tight mb-1 transition-colors ${(plan as any).popular
+                            ? (selectedMaintenance[i] === 'basic' ? "text-[#333]" : "text-[#777]")
+                            : (selectedMaintenance[i] === 'basic' ? "text-white/90 group-hover:text-[#333]" : "text-white/60 group-hover:text-[#777]")
+                          }`} style={{ fontFamily: "'Inter', sans-serif" }}>
+                          Basic Care
                         </p>
-                        <p className={`text-[0.7rem] transition-colors ${(plan as any).popular ? "text-[#999]" : "text-white/40"}`} style={{ fontFamily: "'Inter', sans-serif" }}>+Rp 250.000 / bulan</p>
+                        <p className={`text-[0.7rem] transition-colors ${(plan as any).popular ? "text-[#999]" : "text-white/40 group-hover:text-[#999]"
+                          }`} style={{ fontFamily: "'Inter', sans-serif" }}>
+                          +Rp 250.000 / bln
+                        </p>
+                      </div>
+                    </label>
+
+                    {/* Advanced Care */}
+                    <label
+                      className={`flex items-start gap-3 cursor-pointer p-3 rounded-xl border transition-all duration-300 ${selectedMaintenance[i] === 'advanced'
+                          ? 'border-emerald-500/40 bg-emerald-500/5'
+                          : 'border-white/10 hover:border-white/20 group-hover:border-black/10 group-hover:hover:border-black/20'
+                        }`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setSelectedMaintenance(prev => ({
+                          ...prev,
+                          [i]: prev[i] === 'advanced' ? '' : 'advanced'
+                        }));
+                      }}
+                    >
+                      <div
+                        className={`mt-0.5 w-4 h-4 rounded border flex items-center justify-center shrink-0 transition-colors duration-300 ${selectedMaintenance[i] === 'advanced'
+                            ? 'bg-emerald-500 border-emerald-500 text-[#0a0a0a]'
+                            : 'border-white/30 text-transparent group-hover:border-black/20'
+                          }`}
+                      >
+                        <Check size={10} strokeWidth={4} />
+                      </div>
+                      <div className="flex-1 select-none">
+                        <div className="flex items-center gap-2 mb-1">
+                          <p className={`text-[0.8rem] font-medium leading-tight transition-colors ${(plan as any).popular
+                              ? (selectedMaintenance[i] === 'advanced' ? "text-[#333]" : "text-[#777]")
+                              : (selectedMaintenance[i] === 'advanced' ? "text-white/90 group-hover:text-[#333]" : "text-white/60 group-hover:text-[#777]")
+                            }`} style={{ fontFamily: "'Inter', sans-serif" }}>
+                            Advanced Care
+                          </p>
+                          <span className="text-[9px] tracking-[0.05em] uppercase bg-emerald-500/10 text-emerald-500 px-1.5 py-0.5 rounded-md font-bold">MAX</span>
+                        </div>
+                        <p className={`text-[0.7rem] transition-colors ${(plan as any).popular ? "text-[#999]" : "text-white/40 group-hover:text-[#999]"
+                          }`} style={{ fontFamily: "'Inter', sans-serif" }}>
+                          +Rp 650.000 / bln
+                        </p>
                       </div>
                     </label>
                   </div>
