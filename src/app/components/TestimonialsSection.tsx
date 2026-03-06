@@ -185,10 +185,6 @@ export function TestimonialsSection() {
                     bestRating: "5",
                 },
                 reviewBody: t.text,
-                itemReviewed: {
-                    "@type": "LocalBusiness",
-                    name: "BangBisnis",
-                },
             })),
         });
         document.head.appendChild(script);
