@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useNavigate, useLocation } from "react-router";
 
 const navLinks = [
   { label: "Mengapa", href: "#problem" },
@@ -17,6 +17,8 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 80);
@@ -48,16 +50,16 @@ export function Navbar() {
       >
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <motion.a
-            href="#"
+          <Link
+            to="/"
             aria-label="Kembali ke Beranda"
             onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              if (window.location.pathname === '/') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
             }}
-            className="flex items-center gap-2.5 group"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className="flex items-center gap-2.5 group hover:scale-105 active:scale-95 transition-transform"
             style={{ fontFamily: "'Urbanist', sans-serif" }}
           >
             <motion.div
@@ -73,7 +75,7 @@ export function Navbar() {
             >
               bangbisnis
             </span>
-          </motion.a>
+          </Link>
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-1">
@@ -85,9 +87,9 @@ export function Navbar() {
                 transition={{ delay: 0.1 + i * 0.05, duration: 0.5 }}
                 onClick={() => {
                   if (link.href.startsWith('/')) {
-                    window.location.href = link.href;
-                  } else if (window.location.pathname !== '/') {
-                    window.location.href = '/' + link.href;
+                    navigate(link.href);
+                  } else if (location.pathname !== '/') {
+                    navigate('/' + link.href);
                   } else {
                     scrollTo(link.href);
                   }
@@ -133,8 +135,8 @@ export function Navbar() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
             onClick={() => {
-              if (window.location.pathname !== '/') {
-                window.location.href = '/#cta';
+              if (location.pathname !== '/') {
+                navigate('/#cta');
               } else {
                 scrollTo("#cta");
               }
@@ -181,9 +183,9 @@ export function Navbar() {
                   transition={{ delay: 0.2 + i * 0.08 }}
                   onClick={() => {
                     if (link.href.startsWith('/')) {
-                      window.location.href = link.href;
-                    } else if (window.location.pathname !== '/') {
-                      window.location.href = '/' + link.href;
+                      navigate(link.href);
+                    } else if (location.pathname !== '/') {
+                      navigate('/' + link.href);
                     } else {
                       scrollTo(link.href);
                     }
@@ -215,8 +217,8 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
                 onClick={() => {
-                  if (window.location.pathname !== '/') {
-                    window.location.href = '/#cta';
+                  if (location.pathname !== '/') {
+                    navigate('/#cta');
                   } else {
                     scrollTo("#cta");
                   }
