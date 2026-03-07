@@ -43,18 +43,18 @@ export function BlogPost() {
             author: {
                 "@type": "Organization",
                 name: "BangBisnis",
-                url: "https://bangbisnis.id",
+                url: "https://bangbisnis.web.id",
             },
             publisher: {
                 "@type": "Organization",
                 name: "BangBisnis",
-                url: "https://bangbisnis.id",
+                url: "https://bangbisnis.web.id",
             },
             datePublished: article.publishDate,
             dateModified: article.publishDate,
             mainEntityOfPage: {
                 "@type": "WebPage",
-                "@id": `https://bangbisnis.id/blog/${article.slug}`,
+                "@id": `https://bangbisnis.web.id/blog/${article.slug}`,
             },
         });
         document.head.appendChild(script);

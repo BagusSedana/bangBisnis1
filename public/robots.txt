@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bangbisnis.id/sitemap.xml
+Sitemap: https://bangbisnis.web.id/sitemap.xml
