@@ -65,7 +65,7 @@ export const blogArticles: BlogArticle[] = [
 
       <h2>Kesimpulan</h2>
       <p>Biaya buat website untuk warung makan di Bali mulai dari <strong>Rp 800.000</strong> untuk yang paling dasar, hingga <strong>Rp 3.500.000</strong> untuk yang paling lengkap. Untuk bisnis kuliner, kami sangat menyarankan setidaknya paket menengah yang sudah termasuk foto menu, integrasi WhatsApp, dan tampilan mobile-friendly.</p>
-      <p>Masih bingung paket mana yang paling cocok? <strong>Konsultasi gratis via WhatsApp</strong> — ceritakan bisnis kamu dan kami bantu tentukan paket yang paling efisien.</p>
+      <p>Masih bingung paket mana yang paling cocok? Pelajari <a href="/jasa-pembuatan-website-bali"><strong>Layanan Pembuatan Website Profesional</strong></a> kami, atau <a href="https://wa.me/6287701785344"><strong>Konsultasi gratis via WhatsApp</strong></a> — ceritakan bisnis kamu dan kami bantu tentukan paket yang paling efisien.</p>
     `,
   },
   {
@@ -105,7 +105,7 @@ export const blogArticles: BlogArticle[] = [
 
       <h2>Mulai Dari Mana?</h2>
       <p>Kabar baiknya, membuat website profesional untuk UMKM di Bali tidak harus mahal. Dengan investasi mulai dari <strong>Rp 800.000</strong>, kamu sudah bisa punya website yang tampil profesional, mobile-friendly, dan siap muncul di pencarian Google.</p>
-      <p>Jangan biarkan kompetitor selangkah lebih maju. Hubungi kami untuk <strong>konsultasi gratis</strong> dan temukan paket yang paling sesuai dengan kebutuhan bisnis kamu di Bali.</p>
+      <p>Jangan biarkan kompetitor selangkah lebih maju. Lihat <a href="/jasa-website-umkm-bali"><strong>Paket Website UMKM Bali</strong></a> kami, atau hubungi untuk <a href="https://wa.me/6287701785344"><strong>konsultasi gratis</strong></a> dan temukan paket yang paling sesuai dengan kebutuhan bisnis kamu di Bali.</p>
     `,
   },
   {
@@ -204,7 +204,7 @@ export const blogArticles: BlogArticle[] = [
 
       <h2>Kesimpulan</h2>
       <p>Untuk bisnis kuliner di Bali, <strong>Instagram efektif untuk membangun komunitas dan engagement, tapi website adalah aset jangka panjang yang mendatangkan pelanggan baru dari Google setiap hari</strong>. Keduanya saling melengkapi, bukan saling menggantikan.</p>
-      <p>Dengan investasi website mulai dari Rp 800.000, kamu sudah bisa mulai muncul di pencarian Google dan memberikan pengalaman yang lebih baik kepada calon pelanggan. <a href="https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20tertarik%20konsultasi%20pembuatan%20website%20kuliner" target="_blank" rel="noopener noreferrer"><strong>Konsultasi gratis</strong></a> sekarang dan kami bantu strategi digital yang tepat untuk warung atau restoran kamu.</p>
+      <p>Dengan investasi di <a href="/jasa-pembuatan-website-bali"><strong>Jasa Pembuatan Website</strong></a> kami mulai dari Rp 800.000, kamu sudah bisa mulai muncul di pencarian Google dan memberikan pengalaman yang lebih baik kepada calon pelanggan. <a href="https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20tertarik%20konsultasi%20pembuatan%20website%20kuliner" target="_blank" rel="noopener noreferrer"><strong>Konsultasi gratis</strong></a> sekarang dan kami bantu strategi digital yang tepat untuk warung atau restoran kamu.</p>
     `,
   },
   {
@@ -229,7 +229,7 @@ export const blogArticles: BlogArticle[] = [
 
       <div class="my-10 p-8 rounded-2xl bg-emerald-950/30 border border-emerald-500/20">
         <h3 class="text-xl font-urbanist text-emerald-400 mb-4 tracking-widest text-sm">Action Plan:</h3>
-        <p class="text-white/80">Buatlah <strong>Halaman Layanan (Service Pages)</strong> spesifik untuk setiap variasi jasa kamu. Satu URL untuk satu jasa. Misalnya: <code>/jasa-pembuatan-website-bali</code>, atau <code>/jasa-website-umkm</code>.</p>
+        <p class="text-white/80">Buatlah <strong>Halaman Layanan (Service Pages)</strong> spesifik untuk setiap variasi jasa kamu. Satu URL untuk satu jasa. Misalnya: <code><a href="/jasa-pembuatan-website-bali" class="text-emerald-400 hover:underline">/jasa-pembuatan-website-bali</a></code>, atau <code><a href="/jasa-website-umkm-bali" class="text-emerald-400 hover:underline">/jasa-website-umkm-bali</a></code>.</p>
       </div>
 
       <h2>2. Rahasia SEO Lokal (Sebutkan Geografismu!)</h2>
@@ -252,7 +252,7 @@ export const blogArticles: BlogArticle[] = [
       <h2>Kesimpulan: Kualitas Jauh Mengalahkan Kuantitas</h2>
       <p>Mendapatkan 30 pengunjung per bulan yang menghasilkan 2 order (Closing) jauh lebih bernilai dibanding 3.000 pengunjung namun nol pembelian. SEO untuk konversi berarti memahami pikiran klien yang sudah siap membeli.</p>
       
-      <p>Jika kamu penyedia layanan lokal, UMKM, atau korporasi yang merasa traffic website saat ini salah sasaran, tim BangBisnis siap menstruktur ulang arsitektur logis websitemu. <a href="https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20perlu%20bantuan%20struktur%20SEO%20dan%20website%20untuk%20menarik%20klien" target="_blank" rel="noopener noreferrer"><strong>Diskusikan kebutuhan SEO On-Page websitemu bersama kami hari ini secara gratis.</strong></a></p>
+      <p>Jika kamu penyedia layanan lokal, UMKM, atau korporasi yang merasa traffic website saat ini salah sasaran, tim ahli di layanan <a href="/jasa-pembuatan-website-bali"><strong>Jasa Pembuatan Website Bali</strong></a> kami siap menstruktur ulang arsitektur logis websitemu. <a href="https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20perlu%20bantuan%20struktur%20SEO%20dan%20website%20untuk%20menarik%20klien" target="_blank" rel="noopener noreferrer"><strong>Diskusikan kebutuhan SEO On-Page websitemu bersama kami hari ini secara gratis.</strong></a></p>
     `
   }
 ];
