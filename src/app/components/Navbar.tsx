@@ -86,6 +86,8 @@ export function Navbar() {
                 onClick={() => {
                   if (link.href.startsWith('/')) {
                     window.location.href = link.href;
+                  } else if (window.location.pathname !== '/') {
+                    window.location.href = '/' + link.href;
                   } else {
                     scrollTo(link.href);
                   }
@@ -130,7 +132,13 @@ export function Navbar() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
-            onClick={() => scrollTo("#cta")}
+            onClick={() => {
+              if (window.location.pathname !== '/') {
+                window.location.href = '/#cta';
+              } else {
+                scrollTo("#cta");
+              }
+            }}
             className="hidden md:flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-white px-5 py-2.5 rounded-xl text-[13px] font-semibold tracking-[0.01em] transition-colors duration-200"
             style={{ fontFamily: "'Urbanist', sans-serif" }}
             whileHover={{ scale: 1.03 }}
@@ -174,6 +182,8 @@ export function Navbar() {
                   onClick={() => {
                     if (link.href.startsWith('/')) {
                       window.location.href = link.href;
+                    } else if (window.location.pathname !== '/') {
+                      window.location.href = '/' + link.href;
                     } else {
                       scrollTo(link.href);
                     }
@@ -204,7 +214,13 @@ export function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                onClick={() => scrollTo("#cta")}
+                onClick={() => {
+                  if (window.location.pathname !== '/') {
+                    window.location.href = '/#cta';
+                  } else {
+                    scrollTo("#cta");
+                  }
+                }}
                 className="mt-4 bg-emerald-500 text-white px-8 py-3.5 rounded-xl text-[14px] font-semibold"
                 style={{ fontFamily: "'Urbanist', sans-serif" }}
               >

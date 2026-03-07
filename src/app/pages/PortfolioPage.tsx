@@ -51,9 +51,9 @@ export function PortfolioPage() {
                 className="fixed top-0 left-0 right-0 h-[2px] bg-emerald-500 z-[60]"
             />
 
-            <div className="pt-24 mt-8">
+            <main className="flex-grow pt-16">
                 <PortfolioSection />
-            </div>
+            </main>
 
             <Footer />
             <FloatingWhatsApp />
