@@ -55,7 +55,7 @@ export function IntegrasiWhatsApp() {
                             Pembeli Pergi Karena Anda <span className="italic text-white/40">Telat Balas?</span>
                         </h1>
                         <p className="text-white/40 mb-8 max-w-xl text-[1.05rem] leading-relaxed">
-                            Di era digital, orang tidak punya kesabaran untuk mengisi form email yang kaku. Jika mereka tidak bisa langsung chat dengan Admin Anda detik itu juga, mereka akan pindah ke kompetitor. Jangan biarkan *leads* panas menguap begitu saja.
+                            Di era serba instan, 78% pelanggan membeli dari bisnis yang membalas paling cepat. Jangan biarkan *leads* panas menguap karena menunggu email balasan. Integrasikan WhatsApp di website Anda sekarang dan sulap pengunjung menjadi pembeli detik ini juga.
                         </p>
                         <div className="flex gap-4">
                             <motion.a
@@ -86,15 +86,15 @@ export function IntegrasiWhatsApp() {
                 {/* Benefits & Marketing */}
                 <div className="mt-32">
                     <div className="text-center mb-16">
-                        <h2 className="text-white text-3xl md:text-4xl mb-4" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.02em" }}>Menunggu Adalah Pembunuh Konversi</h2>
-                        <p className="text-white/40 max-w-2xl mx-auto">Kami mengintegrasikan sistem WhatsApp dinamis di website Anda untuk mengurangi *friction* (hambatan) pelanggan saat sedang ingin bertanya atau beli produk Anda.</p>
+                        <h2 className="text-white text-3xl md:text-4xl mb-4" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.02em" }}>Jembatan Langsung ke Kantong Pelanggan</h2>
+                        <p className="text-white/45 max-w-2xl mx-auto text-[1.05rem] leading-relaxed">Menghilangkan semua hambatan (*friction*) saat pelanggan sedang ragu. Kami rancang sistem WhatsApp dinamis yang membuat mereka merasa dibantu, bukan dijual.</p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
                         {[
-                            { icon: CheckCircle2, title: "Pesan Otomatis (Pre-filled)", desc: "Customer malas mengetik. Pas mereka klik tombol di web, chat WA udah ada teks otomatis contoh 'Halo, saya mau pesan paket yang Promo'. Konversi naik drastis." },
-                            { icon: FastForward, title: "Tombol Floating Menggoda", desc: "Berikan ketenangan pikiran dengan ikon WhatsApp yang selalu membuntuti layar pembeli. Kapan pun mereka ragu, bantuan hanya berjarak 1 klik." },
-                            { icon: Bot, title: "Multi-Agent Support", desc: "Punya 3 CS (Sales, Support, Info)? Kami siapkan rotasi agent atau tombol cabang WA berbeda buat pembeli agar tidak menumpuk di 1 nomor admin." },
+                            { icon: CheckCircle2, title: "Pesan Otomatis (Pre-filled)", desc: "Customer zaman sekarang malas mengetik. Begitu mereka klik tombol WhatsApp di web, chat sudah otomatis terisi (misal: 'Halo Admin, saya tertarik dengan Layanan A'). Konversi naik drastis karena mereka tinggal kirim." },
+                            { icon: FastForward, title: "Tombol Floating Menggoda", desc: "Berikan rasa aman dengan ikon WhatsApp elegan yang selalu mengikuti layar saat pembeli *scroll* halaman. Kapan pun mereka punya pertanyaan fatal yang menahan pembelian, bantuan hanya berjarak 1 klik." },
+                            { icon: Bot, title: "Sistem Multi-Agent Cerdas", desc: "Punya 3 Admin (Sales, Support, Info)? Daripada pelanggan bingung, kami buatkan menu cabang WhatsApp. Pesan masuk ke divisi yang tepat, pembeli dilayani lebih cepat, admin bebas *burnout*." },
                         ].map((item, i) => (
                             <motion.div
                                 key={item.title}
@@ -119,13 +119,13 @@ export function IntegrasiWhatsApp() {
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-32 bg-emerald-950/30 border border-emerald-500/20 rounded-[2.5rem] p-12 text-center relative overflow-hidden"
+                    className="mt-32 bg-emerald-950/30 border border-emerald-500/20 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-emerald-900/10"
                 >
-                    <div className="absolute top-0 right-1/2 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full mix-blend-screen" />
-                    <h2 className="text-white text-3xl md:text-4xl mb-6 relative z-10" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.02em" }}>Banjir Chat Pelanggan Hari Ini Juga</h2>
-                    <p className="text-white/60 mb-8 max-w-xl mx-auto relative z-10">Setiap detik website Anda tayang tanpa nomor WhatsApp, Anda sedang kehilangan penjualan potensial. Ubah website Anda sekarang.</p>
-                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-400 transition-colors shadow-xl shadow-emerald-500/20 relative z-10">
-                        Integrasikan WhatsApp ke Web <MessageCircle size={18} />
+                    <div className="absolute top-0 right-1/2 w-64 h-64 bg-emerald-500/20 blur-[120px] rounded-full mix-blend-screen" />
+                    <h2 className="text-white text-3xl md:text-5xl mb-6 relative z-10" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.03em", lineHeight: 1.1 }}>Banjir Chat Pelanggan<br /><span className="italic text-emerald-400">Hari Ini Juga</span></h2>
+                    <p className="text-white/60 mb-10 max-w-xl mx-auto relative z-10 text-[1.1rem]">Setiap detik website Anda tayang tanpa kemudahan akses WhatsApp, Anda sedang membocorkan anggaran iklan ke kompetitor. Ubah website Anda menjadi mesin penangkap *leads* sekarang.</p>
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-emerald-500 text-white px-10 py-5 rounded-full font-bold text-[15px] hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_10px_40px_-10px_rgba(16,185,129,0.5)] relative z-10">
+                        Integrasikan WhatsApp ke Web <MessageCircle size={20} />
                     </a>
                 </motion.div>
             </div>

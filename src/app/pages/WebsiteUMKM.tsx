@@ -52,10 +52,10 @@ export function WebsiteUMKM() {
                             className="text-white mb-6"
                             style={{ fontFamily: "'Urbanist', sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", lineHeight: 1.05, letterSpacing: "-0.04em" }}
                         >
-                            Toko Sebelah Lebih Ramai Karena Mereka <span className="italic text-white/40">Ada di Google.</span>
+                            Toko Sebelah Lebih Ramai Karena Mereka <br /><span className="italic text-emerald-400">Ada di Google.</span>
                         </h1>
-                        <p className="text-white/40 mb-8 max-w-xl text-[1.05rem] leading-relaxed">
-                            Di Bali, wisatawan dan warga lokal mengandalkan Google Maps dan pencarian lokal. Jika warung, salon, atau toko Anda tidak punya website yang teroptimasi, Anda menyerahkan pelanggan ke kompetitor setiap hari.
+                        <p className="text-white/40 mb-8 max-w-xl text-[1.1rem] leading-relaxed">
+                            Fakta pahit: Di Bali, sebagus apapun produk Anda, turis dan warga lokal akan pergi ke kompetitor yang muncul pertama di Google Maps. Jangan biarkan omset bulanan Anda direbut hanya karena bisnis Anda "gaib" di internet. Bangun kehadiran digital yang solid sekarang.
                         </p>
                         <div className="flex gap-4">
                             <motion.a
@@ -86,15 +86,15 @@ export function WebsiteUMKM() {
                 {/* Benefits & Marketing */}
                 <div className="mt-32">
                     <div className="text-center mb-16">
-                        <h2 className="text-white text-3xl md:text-4xl mb-4" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.02em" }}>Saatnya Usaha Kecil Tampil Besar</h2>
-                        <p className="text-white/40 max-w-2xl mx-auto">Kami merancang website khusus yang gampang diurus orang awam sekalipun, fokus pada mendatangkan pelanggan sekitar yang sedang butuh jasa Anda *saat ini juga*.</p>
+                        <h2 className="text-white text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.03em" }}>Saatnya Usaha Kecil <span className="text-emerald-400 italic">Tampil Raksasa</span></h2>
+                        <p className="text-white/50 max-w-2xl mx-auto text-[1.05rem] leading-relaxed">Lupakan bayar influencer mahal. Kami merangkai website kasir dan portofolio cerdas yang menjaring pelanggan sekitar lokasi Anda secara otomatis 24 jam sehari.</p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
                         {[
-                            { icon: MapPin, title: "Merajai Pencarian Lokal", desc: "Anda punya Laundry di Canggu? Atau rental motor di Seminyak? Kami pastikan turis menemukan Anda lebih cepat dari kompetitor lewat *local SEO*." },
-                            { icon: ScanHeart, title: "Katalog & Menu Tanpa Ribet", desc: "Tinggalkan format PDF kaku di WA. Berikan katalog dinamis atau daftar menu yang cantik. Anda pun bisa mengubah harga semudah update status sosial media." },
-                            { icon: Headphones, title: "Anti Gaptek, Didampingi Penuh", desc: "Takut website rusak? Bingung pakenya? Tenang. Klien UMKM kami mendapakan kelas privat mini dan dukungan teknis jika ada yang bingung." },
+                            { icon: MapPin, title: "Merajai Pencarian Lokal", desc: "Punya Laundry di Canggu atau rental motor di Seminyak? Kami tanamkan Local SEO brutal agar turis bule dan warga sekitar melihat bisnis Anda di urutan pertama pencarian Google." },
+                            { icon: ScanHeart, title: "Katalog & Menu Tanpa Ribet", desc: "Berhenti kirim menu PDF buram di WA! Kami buatkan katalog produk digital elegan. Klien tinggal sentuh layar untuk melihat harga, dan langsung terhubung ke kasir Anda." },
+                            { icon: Headphones, title: "Anti Gaptek, Kami Kawal Penuh", desc: "Takut website rusak? Bingung pakenya? Santai. Paket UMKM kami sudah termasuk pendampingan eksklusif. Anda fokus urus pelanggan, biar kami yang urus teknisnya." },
                         ].map((item, i) => (
                             <motion.div
                                 key={item.title}
@@ -119,13 +119,13 @@ export function WebsiteUMKM() {
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-32 bg-emerald-950/30 border border-emerald-500/20 rounded-[2.5rem] p-12 text-center relative overflow-hidden"
+                    className="mt-32 bg-emerald-950/30 border border-emerald-500/20 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-emerald-900/20"
                 >
-                    <div className="absolute top-0 right-10 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full mix-blend-screen" />
-                    <h2 className="text-white text-3xl md:text-4xl mb-6 relative z-10" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.02em" }}>Jadilah Pilihan Pertama di Kota Anda</h2>
-                    <p className="text-white/60 mb-8 max-w-xl mx-auto relative z-10">Harga paket UMKM kami dibuat sangat bersahabat karena kami ingin UKM lokal di Bali bisa menjangkau dunia maya layaknya korporasi. Kembangkan usaha Anda!</p>
-                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-400 transition-colors shadow-xl shadow-emerald-500/20 relative z-10">
-                        Punya Bisnis? Mari Ngobrol <MessageCircle size={18} />
+                    <div className="absolute top-0 right-10 w-64 h-64 bg-emerald-500/20 blur-[120px] rounded-full mix-blend-screen" />
+                    <h2 className="text-white text-3xl md:text-5xl mb-6 relative z-10" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.03em" }}>Jadilah Pilihan Pertama di <span className="italic text-emerald-400">Kota Anda</span></h2>
+                    <p className="text-white/60 mb-10 max-w-xl mx-auto relative z-10 text-[1.1rem] leading-relaxed">Paket starter web UMKM kami ciptakan sangat terjangkau karena misi kami adalah melihat bisnis lokal Bali melompat berkelas global. Buka pintu kasir Anda sekarang.</p>
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-emerald-500 text-white px-10 py-5 rounded-full font-bold text-[15px] hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_10px_40px_-10px_rgba(16,185,129,0.5)] relative z-10">
+                        Kembangkan Usaha Saya <MessageCircle size={20} />
                     </a>
                 </motion.div>
             </div>

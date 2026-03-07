@@ -52,10 +52,10 @@ export function CompanyProfile() {
                             className="text-white mb-6"
                             style={{ fontFamily: "'Urbanist', sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", lineHeight: 1.05, letterSpacing: "-0.04em" }}
                         >
-                            Klien Besar Anda Sedang Mencari di Google. <span className="italic text-white/40">Apakah Website Anda Siap Dilihat?</span>
+                            Klien Besar Sedang Mencari Anda. <br /><span className="italic text-emerald-400">Apakah Anda Siap Dilihat?</span>
                         </h1>
-                        <p className="text-white/40 mb-8 max-w-xl text-[1.05rem] leading-relaxed">
-                            Fakta pahitnya: Kualitas bisnis Anda sering dinilai dari sebagus apa website Anda. Jangan sampai Anda kehilangan proyek jutaan Rupiah hanya karena website perusahaan terlihat "murahan" atau ketinggalan zaman.
+                        <p className="text-white/40 mb-8 max-w-xl text-[1.1rem] leading-relaxed">
+                            Berapa banyak proyek jutaan rupiah yang melayang ke kompetitor hanya karena website perusahaan Anda terlihat "murahan" dan meragukan? Di ranah B2B dan investasi, *first impression* adalah segalanya. Amankan reputasi Anda dengan Company Profile kelas dunia.
                         </p>
                         <div className="flex gap-4">
                             <motion.a
@@ -86,15 +86,15 @@ export function CompanyProfile() {
                 {/* Benefits & Marketing */}
                 <div className="mt-32">
                     <div className="text-center mb-16">
-                        <h2 className="text-white text-3xl md:text-4xl mb-4" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.02em" }}>Website Adalah "Kantor Digital" Anda</h2>
-                        <p className="text-white/40 max-w-2xl mx-auto">Jika kantor fisik Anda lux dan rapi, mengapa kantor digital Anda berantakan? Ini yang Anda dapatkan dengan investasi Company Profile di BangBisnis.</p>
+                        <h2 className="text-white text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.03em" }}>Website Adalah <span className="text-emerald-400 italic">"Kantor Digital"</span> Anda</h2>
+                        <p className="text-white/50 max-w-2xl mx-auto text-[1.05rem] leading-relaxed">Jika lobi kantor fisik Anda mewah dan rapi, haram hukumnya menelantarkan wajah digital Anda. Kami merancang Company Profile yang memancarkan otoritas dan kepercayaan mutlak.</p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
                         {[
-                            { icon: ShieldCheck, title: "Kredibilitas Instan (Authority)", desc: "Investor dan klien premium tidak akan deal sebelum mengecek portofolio online Anda. Desain website kami dirancang untuk membuat mereka berkata 'Wow, perusahaan ini bonafid'." },
-                            { icon: TrendingUp, title: "Etalase Profesional 24 Jam", desc: "Sales Anda butuh tidur, website Anda tidak. Tampilkan profil perusahaan, sejarah, legalitas, dan pencapaian Anda dalam satu halaman elegan yang bisa diakses kapan saja." },
-                            { icon: Star, title: "Dominasi Kompetitor Lokal", desc: "Masih pakai blog gratisan? Atau sekadar linktree? Tinggalkan kompetitor Anda jauh di belakang dengan UI/UX premium kelas korporat global." },
+                            { icon: ShieldCheck, title: "Kredibilitas Instan (Authority)", desc: "Investor dan klien premium tidak akan *deal* sebelum menginvestigasi rekam jejak Anda. Desain arsitektur informasi kami dirancang untuk membuat mereka bergumam, 'Perusahaan ini sangat bonafid'." },
+                            { icon: TrendingUp, title: "Etalase Profesional 24 Jam", desc: "Tim *Sales* Anda butuh istirahat, website Anda tidak. Tampilkan profil direksi, legalitas, hingga mahakarya proyek Anda dalam satu *flow* presentasi yang elegan tak henti." },
+                            { icon: Star, title: "Tinggalkan Lawan Jauh di Belakang", desc: "Masih bergantung pada brosur PDF kaku atau sosial media biasa? Raih dominasi absolut di industri Anda dengan standar UI/UX premium yang biasa dipakai korporasi multinasional." },
                         ].map((item, i) => (
                             <motion.div
                                 key={item.title}
@@ -119,13 +119,13 @@ export function CompanyProfile() {
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-32 bg-emerald-950/30 border border-emerald-500/20 rounded-[2.5rem] p-12 text-center relative overflow-hidden"
+                    className="mt-32 bg-emerald-950/30 border border-emerald-500/20 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-emerald-900/20"
                 >
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full mix-blend-screen" />
-                    <h2 className="text-white text-3xl md:text-4xl mb-6 relative z-10" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.02em" }}>Jangan Biarkan First Impression Menghancurkan Deal Anda</h2>
-                    <p className="text-white/60 mb-8 max-w-xl mx-auto relative z-10">Kami hanya menerima slot proyek terbatas setiap bulannya untuk menjaga kualitas premium. Amankan jadwal konsultasi Anda sekarang sebelum kompetitor mendahului.</p>
-                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-400 transition-colors shadow-xl shadow-emerald-500/20 relative z-10">
-                        Konsultasi & Minta Penawaran Harga <MessageCircle size={18} />
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/20 blur-[120px] rounded-full mix-blend-screen" />
+                    <h2 className="text-white text-3xl md:text-5xl mb-6 relative z-10" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.03em", lineHeight: 1.1 }}>Kesan Pertama <span className="italic text-emerald-400">Menentukan Proyek</span></h2>
+                    <p className="text-white/60 mb-10 max-w-xl mx-auto relative z-10 text-[1.1rem]">Demi menjaga kualitas *craftsmanship* premium, kami hanya menerima klien terbatas setiap bulannya. Amankan slot konsultasi Anda sekarang sebelum kalender kami penuh.</p>
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-emerald-500 text-white px-10 py-5 rounded-full font-bold text-[15px] hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_10px_40px_-10px_rgba(16,185,129,0.5)] relative z-10">
+                        Amankan Citra Bisnis Anda <MessageCircle size={20} />
                     </a>
                 </motion.div>
             </div>

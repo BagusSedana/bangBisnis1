@@ -52,10 +52,10 @@ export function LandingPage() {
                             className="text-white mb-6"
                             style={{ fontFamily: "'Urbanist', sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", lineHeight: 1.05, letterSpacing: "-0.04em" }}
                         >
-                            Bakar Uang Iklan Tapi <span className="italic text-white/40">Nggak Ada yang Beli?</span>
+                            Bakar Uang Iklan Tapi <br /><span className="italic text-emerald-400">Nggak Ada yang Beli?</span>
                         </h1>
-                        <p className="text-white/40 mb-8 max-w-xl text-[1.05rem] leading-relaxed">
-                            Anda sudah mendatangkan ribuan klik dari Meta Ads atau TikTok, tapi pengunjung kabur sebelum membaca sampai bawah. Masalahnya bukan di iklan Anda, tapi penawaran yang tidak menarik di halaman Anda.
+                        <p className="text-white/40 mb-8 max-w-xl text-[1.1rem] leading-relaxed">
+                            Mendatangkan ribuan klik dari Meta Ads atau TikTok itu mudah. Masalahnya, jika pengunjung kabur dalam 3 detik pertama karena halaman Anda lambat atau membingungkan, Anda sedang membuang uang. Berhenti mensponsori Mark Zuckerberg secara cuma-cuma.
                         </p>
                         <div className="flex gap-4">
                             <motion.a
@@ -86,15 +86,15 @@ export function LandingPage() {
                 {/* Benefits & Marketing */}
                 <div className="mt-32">
                     <div className="text-center mb-16">
-                        <h2 className="text-white text-3xl md:text-4xl mb-4" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.02em" }}>Rahasia Landing Page yang Menjual</h2>
-                        <p className="text-white/40 max-w-2xl mx-auto">Pengunjung rata-rata hanya memberikan waktu 3 detik. Kami gunakan struktur psikologi copywriting yang memaksa mereka untuk terus *scroll* ke bawah dan menekan tombol beli.</p>
+                        <h2 className="text-white text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.03em" }}>Mesin Pencetak ROI Positif</h2>
+                        <p className="text-white/50 max-w-2xl mx-auto text-[1.05rem] leading-relaxed">Kami merancang *Landing Page* bukan sekadar agar terlihat cantik, tapi menggunakan struktur psikologi *copywriting* yang terbukti memaksa pengunjung menekan tombol beli.</p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
                         {[
-                            { icon: Target, title: "Formula PAS (Pain Agitation Solution)", desc: "Dari headline yang menekan masalah (pain points) pelanggan, mengaduk emosi mereka, lalu menawarkan produk Anda sebagai satu-satunya solusi." },
-                            { icon: BarChart, title: "Siap Pasang Facebook Pixel & TikTok", desc: "Tanpa data, iklan Anda buta. Kami pastikan Landing Page Anda siap melacak setiap klik dan konversi agar algoritma iklan Anda semakin pintar." },
-                            { icon: MousePointerClick, title: "Call to Action (CTA) Hipnotis", desc: "Tombol WhatsApp atau Checkout diletakkan secara strategis dengan kontras warna memikat yang terbukti secara psikologis menaikkan jumlah klik hingga 300%." },
+                            { icon: Target, title: "Formula PAS (Pain Agitation Solution)", desc: "Setiap kalimat dilahirkan dengan tujuan. Dari *headline* yang menekan masalah (pain points) pelanggan, mengaduk emosi mereka, lalu menawarkan produk Anda sebagai satu-satunya pahlawan." },
+                            { icon: BarChart, title: "Siap Pasang Facebook Pixel & TikTok", desc: "Beriklan tanpa data ibarat setir mobil tutup mata. Landing Page kami dirancang khusus agar Pixel tracking dan API konversi 100% akurat menyuapi algoritma Meta." },
+                            { icon: MousePointerClick, title: "Call-to-Action (CTA) Hipnotis", desc: "Kami tidak sekadar menaruh tombol. Tombol Checkout diletakkan secara mikrostatik dengan kontras yang telah lulus uji *heat-map* demi menaikkan CTR hingga lipat tiga." },
                         ].map((item, i) => (
                             <motion.div
                                 key={item.title}
@@ -119,13 +119,13 @@ export function LandingPage() {
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-32 bg-emerald-950/30 border border-emerald-500/20 rounded-[2.5rem] p-12 text-center relative overflow-hidden"
+                    className="mt-32 bg-emerald-950/30 border border-emerald-500/20 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-emerald-900/20"
                 >
-                    <div className="absolute top-0 right-10 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full mix-blend-screen" />
-                    <h2 className="text-white text-3xl md:text-4xl mb-6 relative z-10" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.02em" }}>Berhenti Membuang Budget Iklan Anda</h2>
-                    <p className="text-white/60 mb-8 max-w-xl mx-auto relative z-10">Jangan biarkan traffic mahal yang Anda beli terbuang sia-sia pada halaman yang membingungkan. Ubah pengunjung menjadi pembeli hari ini.</p>
-                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-400 transition-colors shadow-xl shadow-emerald-500/20 relative z-10">
-                        Pesan Landing Page Konversi Tinggi <MessageCircle size={18} />
+                    <div className="absolute top-0 right-10 w-64 h-64 bg-emerald-500/20 blur-[120px] rounded-full mix-blend-screen" />
+                    <h2 className="text-white text-3xl md:text-5xl mb-6 relative z-10" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.03em", lineHeight: 1.1 }}>Berhenti Membakar <br /><span className="italic text-emerald-400">Budget Iklan!</span></h2>
+                    <p className="text-white/60 mb-10 max-w-xl mx-auto relative z-10 text-[1.1rem]">Jangan biarkan *traffic* maha-mahal yang Anda beli terbuang sia-sia pada halaman yang loyo. Ganti *sales page* Anda sekarang dan lupakan Boncos.</p>
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-emerald-500 text-white px-10 py-5 rounded-full font-bold text-[15px] hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_10px_40px_-10px_rgba(16,185,129,0.5)] relative z-10">
+                        Cetak Untung Dari Iklan <MessageCircle size={20} />
                     </a>
                 </motion.div>
             </div>
