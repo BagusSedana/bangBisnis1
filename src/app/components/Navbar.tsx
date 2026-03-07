@@ -50,6 +50,7 @@ export function Navbar() {
           {/* Logo */}
           <motion.a
             href="#"
+            aria-label="Kembali ke Beranda"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
@@ -138,6 +139,7 @@ export function Navbar() {
 
           {/* Mobile hamburger */}
           <button
+            aria-label={mobileOpen ? "Tutup menu" : "Buka menu navigasi"}
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`md:hidden w-10 h-10 flex items-center justify-center ${scrolled ? "text-[#0a0a0a]" : "text-white"
               }`}

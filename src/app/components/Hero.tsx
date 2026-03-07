@@ -424,7 +424,7 @@ export function Hero() {
               <ImageWithFallback
                 src={laptopImg}
                 alt="Website design"
-                fetchPriority="high"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/30 to-transparent" />

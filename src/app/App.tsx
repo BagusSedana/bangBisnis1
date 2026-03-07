@@ -28,6 +28,7 @@ function FloatingWhatsApp() {
       href="https://wa.me/6287701785344"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Hubungi kami via WhatsApp"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}

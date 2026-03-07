@@ -22,7 +22,7 @@ export function Footer() {
           className="mb-16 md:mb-24"
         >
           <span
-            className="text-white/[0.03] block"
+            className="text-white/[0.08] block"
             style={{
               fontFamily: "'Urbanist', sans-serif",
               fontSize: "clamp(4rem, 12vw, 12rem)",
@@ -59,8 +59,8 @@ export function Footer() {
               </span>
             </motion.div>
             <p
-              className="text-white/50 max-w-xs mb-6"
-              style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", lineHeight: 1.7 }}
+              className="text-white/60 max-w-xs mb-6"
+              style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", lineHeight: 1.7 }}
             >
               Jasa pembuatan website profesional untuk UMKM di Bali. Terstruktur, minimalis, dan fokus pada konversi.
             </p>
@@ -68,7 +68,7 @@ export function Footer() {
               href="https://wa.me/6287701785344"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white/50 hover:bg-emerald-500/10 hover:border-emerald-500/30 hover:text-emerald-400 transition-all duration-300 text-[13px]"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white/70 hover:bg-emerald-500/20 hover:border-emerald-500/40 hover:text-emerald-300 transition-all duration-300 text-[13px]"
               style={{ fontFamily: "'Inter', sans-serif" }}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -133,7 +133,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 pb-6">
           <p
-            className="text-[11px] text-white/40 tracking-[0.05em]"
+            className="text-[11px] text-white/50 tracking-[0.05em]"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             &copy; 2026 BangBisnis. Bali, Indonesia. Semua hak dilindungi.
@@ -145,7 +145,7 @@ export function Footer() {
               transition={{ duration: 2, repeat: Infinity }}
             />
             <span
-              className="text-[11px] text-white/40 tracking-[0.05em]"
+              className="text-[11px] text-white/50 tracking-[0.05em]"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Online &amp; Aktif

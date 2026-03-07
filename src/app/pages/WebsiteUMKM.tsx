@@ -77,7 +77,7 @@ export function WebsiteUMKM() {
                         <img
                             src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080&q=80"
                             alt="UMKM Bali Website Optimization"
-                            fetchPriority="high"
+                            loading="lazy"
                             className="w-full aspect-[4/3] object-cover rounded-3xl border border-white/10 shadow-2xl relative z-10"
                         />
                     </motion.div>
