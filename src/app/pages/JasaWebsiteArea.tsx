@@ -161,8 +161,9 @@ const defaultFaqs = (areaName: string) => [
 ];
 
 export function JasaWebsiteArea() {
-    const { lokasi } = useParams();
-    const areaKey = (lokasi || "denpasar").toLowerCase().replace("-", "_");
+    const pathSegments = window.location.pathname.split('-');
+    const lokasi = pathSegments[pathSegments.length - 1] || "denpasar";
+    const areaKey = lokasi.toLowerCase().replace("-", "_");
 
     // Fallback if not in predefined list
     const area = areaData[areaKey] || {

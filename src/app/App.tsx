@@ -91,8 +91,10 @@ export default function App() {
         <Route path="/portofolio/:slug" element={<PortfolioDetailPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
-        <Route path="/jasa-website-:lokasi" element={<JasaWebsiteArea />} />
-      </Routes>
+        <Route path="/jasa-website-denpasar" element={<JasaWebsiteArea />} />
+        <Route path="/jasa-website-badung" element={<JasaWebsiteArea />} />
+        <Route path="/jasa-website-sanur" element={<JasaWebsiteArea />} />
+        <Route path="/jasa-website-gianyar" element={<JasaWebsiteArea />} />      </Routes>
     </BrowserRouter>
   );
 }
