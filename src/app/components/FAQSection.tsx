@@ -48,8 +48,9 @@ export function FAQSection() {
 
         {/* Header */}
         <div className="mb-16 md:mb-24">
-          <div className="overflow-hidden">
-            <motion.h2
+          <h2 className="sr-only">FAQ Jasa Pembuatan Website Bali</h2>
+          <div className="overflow-hidden" aria-hidden="true">
+            <motion.div
               initial={{ y: "100%" }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
@@ -63,10 +64,10 @@ export function FAQSection() {
               }}
             >
               Pertanyaan yang
-            </motion.h2>
+            </motion.div>
           </div>
-          <div className="overflow-hidden">
-            <motion.h2
+          <div className="overflow-hidden" aria-hidden="true">
+            <motion.div
               initial={{ y: "100%" }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
@@ -87,7 +88,7 @@ export function FAQSection() {
               >
                 .
               </motion.span>
-            </motion.h2>
+            </motion.div>
           </div>
         </div>
 

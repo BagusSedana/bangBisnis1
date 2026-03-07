@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Mengapa", href: "#problem" },
   { label: "Layanan", href: "#layanan" },
   { label: "Proses", href: "#proses" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Portfolio", href: "/portofolio" },
   { label: "Harga", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -83,7 +83,13 @@ export function Navbar() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + i * 0.05, duration: 0.5 }}
-                onClick={() => scrollTo(link.href)}
+                onClick={() => {
+                  if (link.href.startsWith('/')) {
+                    window.location.href = link.href;
+                  } else {
+                    scrollTo(link.href);
+                  }
+                }}
                 className={`relative px-4 py-2 text-[12px] tracking-[0.06em] uppercase transition-colors duration-300 group ${scrolled
                   ? "text-[#777] hover:text-[#0a0a0a]"
                   : "text-white/60 hover:text-white"
@@ -165,7 +171,13 @@ export function Navbar() {
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 + i * 0.08 }}
-                  onClick={() => scrollTo(link.href)}
+                  onClick={() => {
+                    if (link.href.startsWith('/')) {
+                      window.location.href = link.href;
+                    } else {
+                      scrollTo(link.href);
+                    }
+                  }}
                   className="text-white text-[28px] tracking-[-0.02em]"
                   style={{ fontFamily: "'Urbanist', sans-serif" }}
                 >

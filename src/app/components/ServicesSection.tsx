@@ -19,14 +19,14 @@ const thumbSeo =
 const services = [
   {
     icon: Globe,
-    title: "Company Profile",
+    title: "Website Company Profile",
     desc: "Website profil perusahaan yang menampilkan identitas bisnis secara profesional dan terpercaya.",
     thumb: thumbCompany,
     href: "/jasa-website-company-profile"
   },
   {
     icon: Layers,
-    title: "Landing Page",
+    title: "Landing Page Bisnis",
     desc: "Halaman tujuan yang dirancang khusus untuk konversi — jelas, fokus, dan efektif.",
     thumb: thumbLanding,
     href: "/jasa-landing-page-bali"
@@ -77,8 +77,9 @@ export function ServicesSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-6">
           <div>
-            <div className="overflow-hidden">
-              <motion.h2
+            <h2 className="sr-only">Layanan Pembuatan Website</h2>
+            <div className="overflow-hidden" aria-hidden="true">
+              <motion.div
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
@@ -92,10 +93,10 @@ export function ServicesSection() {
                 }}
               >
                 Layanan yang kami
-              </motion.h2>
+              </motion.div>
             </div>
-            <div className="overflow-hidden">
-              <motion.h2
+            <div className="overflow-hidden" aria-hidden="true">
+              <motion.div
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
@@ -116,7 +117,7 @@ export function ServicesSection() {
                 >
                   .
                 </motion.span>
-              </motion.h2>
+              </motion.div>
             </div>
           </div>
           <motion.p

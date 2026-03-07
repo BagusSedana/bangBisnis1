@@ -2,50 +2,18 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { SectionLabel } from "./SectionLabel";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-
-const portfolioImg1 = "/img-portfolio-1.webp";
-const portfolioImg2 = "/img-portfolio-2.webp";
-const portfolioImg3 = "/img-portfolio-3.webp";
-
-const projects = [
-  {
-    img: portfolioImg1,
-    category: "Restoran & Kafe",
-    title: "Warung Bambu",
-    location: "Bali",
-    desc: "Website restoran dengan menu digital dan integrasi reservasi langsung via WhatsApp.",
-    result: "+40% reservasi online",
-    color: "#10b981",
-  },
-  {
-    img: portfolioImg2,
-    category: "Hospitality",
-    title: "Villa Serenity",
-    location: "Ubud",
-    desc: "Company profile villa dengan galeri foto premium dan sistem inquiry langsung.",
-    result: "+65% direct booking",
-    color: "#6366f1",
-  },
-  {
-    img: "/img-portfolio-travel.webp",
-    category: "Tour & Travel",
-    title: "TravelJimb",
-    location: "Bali",
-    desc: "Website driver pribadi Bali dengan desain premium dan landing page informasi wisata.",
-    result: "Live Project",
-    color: "#0ea5e9",
-    link: "https://traveljimb.vercel.app/",
-  },
-];
+import { portfolioProjects, PortfolioProject } from "../data/portfolioData";
+import { useNavigate } from "react-router";
 
 function ProjectCard({
   project,
   index,
 }: {
-  project: (typeof projects)[0];
+  project: PortfolioProject;
   index: number;
 }) {
-  const cardRef = useRef<HTMLAnchorElement>(null);
+  const navigate = useNavigate();
+  const cardRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start end", "end start"],
@@ -53,12 +21,10 @@ function ProjectCard({
   const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   return (
-    <motion.a
-      href={project.link || "#"}
-      target={project.link ? "_blank" : undefined}
-      rel={project.link ? "noopener noreferrer" : undefined}
+    <motion.div
+      onClick={() => navigate(`/portofolio/${project.slug}`)}
       ref={cardRef}
-      className={`group relative rounded-3xl overflow-hidden bg-[#111] ${project.link ? "cursor-pointer" : "cursor-default"}`}
+      className={`group relative rounded-3xl overflow-hidden bg-[#111] cursor-pointer`}
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -143,7 +109,7 @@ function ProjectCard({
           </span>
         </div>
       </div>
-    </motion.a>
+    </motion.div>
   );
 }
 
@@ -165,8 +131,9 @@ export function PortfolioSection() {
 
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 md:mb-20">
           <div>
-            <div className="overflow-hidden">
-              <motion.h2
+            <h2 className="sr-only">Portfolio Website</h2>
+            <div className="overflow-hidden" aria-hidden="true">
+              <motion.div
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
@@ -180,10 +147,10 @@ export function PortfolioSection() {
                 }}
               >
                 Proyek yang Telah
-              </motion.h2>
+              </motion.div>
             </div>
-            <div className="overflow-hidden">
-              <motion.h2
+            <div className="overflow-hidden" aria-hidden="true">
+              <motion.div
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
@@ -203,7 +170,7 @@ export function PortfolioSection() {
                 >
                   .
                 </motion.span>
-              </motion.h2>
+              </motion.div>
             </div>
           </div>
           <motion.p
@@ -219,7 +186,7 @@ export function PortfolioSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-5">
-          {projects.map((project, i) => (
+          {portfolioProjects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}
         </div>

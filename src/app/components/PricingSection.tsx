@@ -145,8 +145,9 @@ export function PricingSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-6">
           <div>
-            <div className="overflow-hidden">
-              <motion.h2
+            <h2 className="sr-only">Harga Pembuatan Website</h2>
+            <div className="overflow-hidden" aria-hidden="true">
+              <motion.div
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
@@ -160,10 +161,10 @@ export function PricingSection() {
                 }}
               >
                 Investasi yang
-              </motion.h2>
+              </motion.div>
             </div>
-            <div className="overflow-hidden">
-              <motion.h2
+            <div className="overflow-hidden" aria-hidden="true">
+              <motion.div
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
@@ -184,7 +185,7 @@ export function PricingSection() {
                 >
                   .
                 </motion.span>
-              </motion.h2>
+              </motion.div>
             </div>
           </div>
           <motion.p

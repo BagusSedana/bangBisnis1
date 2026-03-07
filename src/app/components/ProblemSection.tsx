@@ -45,8 +45,9 @@ export function ProblemSection() {
 
         {/* Big statement */}
         <div className="mb-16 md:mb-20">
-          <div className="overflow-hidden">
-            <motion.h2
+          <h2 className="sr-only">Website untuk UMKM dan Bisnis Lokal</h2>
+          <div className="overflow-hidden" aria-hidden="true">
+            <motion.div
               initial={{ y: "100%" }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
@@ -60,10 +61,10 @@ export function ProblemSection() {
               }}
             >
               Bisnis tanpa website
-            </motion.h2>
+            </motion.div>
           </div>
-          <div className="overflow-hidden">
-            <motion.h2
+          <div className="overflow-hidden" aria-hidden="true">
+            <motion.div
               initial={{ y: "100%" }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
@@ -85,7 +86,7 @@ export function ProblemSection() {
               >
                 .
               </motion.span>
-            </motion.h2>
+            </motion.div>
           </div>
         </div>
 

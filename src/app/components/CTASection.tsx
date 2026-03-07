@@ -67,8 +67,9 @@ export function CTASection() {
               </motion.div>
 
               {/* Big headline */}
-              <div className="overflow-hidden mb-2">
-                <motion.h2
+              <h2 className="sr-only">Hubungi Kami</h2>
+              <div className="overflow-hidden mb-2" aria-hidden="true">
+                <motion.div
                   initial={{ y: "100%" }}
                   whileInView={{ y: 0 }}
                   viewport={{ once: true }}
@@ -82,10 +83,10 @@ export function CTASection() {
                   }}
                 >
                   Siap memulai
-                </motion.h2>
+                </motion.div>
               </div>
-              <div className="overflow-hidden mb-8">
-                <motion.h2
+              <div className="overflow-hidden mb-8" aria-hidden="true">
+                <motion.div
                   initial={{ y: "100%" }}
                   whileInView={{ y: 0 }}
                   viewport={{ once: true }}
@@ -106,7 +107,7 @@ export function CTASection() {
                   >
                     ?
                   </motion.span>
-                </motion.h2>
+                </motion.div>
               </div>
 
               <motion.p

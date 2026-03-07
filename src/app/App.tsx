@@ -21,6 +21,9 @@ import { WebsiteUMKM } from "./pages/WebsiteUMKM";
 import { IntegrasiWhatsApp } from "./pages/IntegrasiWhatsApp";
 import { BlogPage } from "./pages/BlogPage";
 import { BlogPost } from "./pages/BlogPost";
+import { PortfolioPage } from "./pages/PortfolioPage";
+import { PortfolioDetailPage } from "./pages/PortfolioDetailPage";
+import { JasaWebsiteArea } from "./pages/JasaWebsiteArea";
 
 function FloatingWhatsApp() {
   return (
@@ -84,8 +87,11 @@ export default function App() {
         <Route path="/jasa-landing-page-bali" element={<LandingPage />} />
         <Route path="/jasa-website-umkm-bali" element={<WebsiteUMKM />} />
         <Route path="/jasa-integrasi-whatsapp-bali" element={<IntegrasiWhatsApp />} />
+        <Route path="/portofolio" element={<PortfolioPage />} />
+        <Route path="/portofolio/:slug" element={<PortfolioDetailPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/jasa-website-:lokasi" element={<JasaWebsiteArea />} />
       </Routes>
     </BrowserRouter>
   );

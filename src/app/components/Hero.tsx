@@ -202,14 +202,15 @@ export function Hero() {
         <div className="grid md:grid-cols-12 gap-0 items-center flex-1">
           {/* LEFT: Giant stacked typography */}
           <motion.div className="md:col-span-7 relative" style={{ y: textY }}>
+            <h1 className="sr-only">Jasa Pembuatan Website Profesional di Bali</h1>
             {/* Line 1: "Jasa Website" */}
-            <div className="overflow-hidden">
+            <div className="overflow-hidden" aria-hidden="true">
               <motion.div
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
               >
-                <h1
+                <div
                   className="text-white"
                   style={{
                     fontFamily: "'Urbanist', sans-serif",
@@ -219,12 +220,12 @@ export function Hero() {
                   }}
                 >
                   Jasa Website
-                </h1>
+                </div>
               </motion.div>
             </div>
 
             {/* Line 2: "Profesional" with underline */}
-            <div className="overflow-hidden -mt-1 md:-mt-2">
+            <div className="overflow-hidden -mt-1 md:-mt-2" aria-hidden="true">
               <motion.div
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
@@ -251,7 +252,7 @@ export function Hero() {
             </div>
 
             {/* Line 3: "untuk UMKM di Bali." */}
-            <div className="overflow-hidden -mt-1 md:-mt-2">
+            <div className="overflow-hidden -mt-1 md:-mt-2" aria-hidden="true">
               <motion.div
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}

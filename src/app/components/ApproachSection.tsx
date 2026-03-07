@@ -64,8 +64,9 @@ export function ApproachSection() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <div>
-              <div className="overflow-hidden">
-                <motion.h2
+              <h2 className="sr-only">Mengapa Memilih BangBisnis</h2>
+              <div className="overflow-hidden" aria-hidden="true">
+                <motion.div
                   initial={{ y: "100%" }}
                   whileInView={{ y: 0 }}
                   viewport={{ once: true }}
@@ -79,10 +80,10 @@ export function ApproachSection() {
                   }}
                 >
                   Pendekatan Terstruktur,
-                </motion.h2>
+                </motion.div>
               </div>
-              <div className="overflow-hidden">
-                <motion.h2
+              <div className="overflow-hidden" aria-hidden="true">
+                <motion.div
                   initial={{ y: "100%" }}
                   whileInView={{ y: 0 }}
                   viewport={{ once: true }}
@@ -104,7 +105,7 @@ export function ApproachSection() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                     style={{ transformOrigin: "left" }}
                   />
-                </motion.h2>
+                </motion.div>
               </div>
             </div>
             <motion.p

@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const links = [
   { label: "Layanan", id: "layanan" },
   { label: "Proses", id: "proses" },
-  { label: "Portfolio", id: "portfolio" },
+  { label: "Portfolio", id: "/portofolio" },
   { label: "Harga", id: "pricing" },
   { label: "FAQ", id: "faq" },
 ];
@@ -89,9 +89,13 @@ export function Footer() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                onClick={() =>
-                  document.querySelector(`#${link.id}`)?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => {
+                  if (link.id.startsWith('/')) {
+                    window.location.href = link.id;
+                  } else {
+                    document.querySelector(`#${link.id}`)?.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="text-[13px] text-white/60 hover:text-white/80 transition-colors duration-300 relative group"
                 style={{ fontFamily: "'Inter', sans-serif" }}
                 whileHover={{ y: -2 }}

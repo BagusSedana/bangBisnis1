@@ -48,6 +48,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Portofolio -->
+  <url>
+    <loc>https://bangbisnis.web.id/portofolio</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog -->
   <url>
     <loc>https://bangbisnis.web.id/blog</loc>
