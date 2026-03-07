@@ -1,28 +1,28 @@
 export interface BlogArticle {
-    slug: string;
-    title: string;
-    metaTitle: string;
-    metaDescription: string;
-    category: string;
-    readTime: number; // in minutes
-    publishDate: string;
-    excerpt: string;
-    content: string; // HTML string
+  slug: string;
+  title: string;
+  metaTitle: string;
+  metaDescription: string;
+  category: string;
+  readTime: number; // in minutes
+  publishDate: string;
+  excerpt: string;
+  content: string; // HTML string
 }
 
 export const blogArticles: BlogArticle[] = [
-    {
-        slug: "biaya-website-warung-makan-bali",
-        title: "Berapa Biaya Buat Website untuk Warung Makan di Bali?",
-        metaTitle: "Biaya Buat Website Warung Makan di Bali 2026 | BangBisnis",
-        metaDescription:
-            "Rincian lengkap harga jasa website untuk warung makan dan restoran di Bali. Mulai dari Rp 800.000 hingga Rp 3.500.000. Cari tahu mana yang sesuai budget Anda.",
-        category: "Panduan Harga",
-        readTime: 5,
-        publishDate: "2026-03-06",
-        excerpt:
-            "Punya warung makan di Bali dan ingin bikin website tapi bingung soal harga? Artikel ini membahas secara jujur semua komponen biaya, mulai dari domain hingga desain, dan paket mana yang cocok untuk bisnis kuliner Anda.",
-        content: `
+  {
+    slug: "biaya-website-warung-makan-bali",
+    title: "Berapa Biaya Buat Website untuk Warung Makan di Bali?",
+    metaTitle: "Biaya Buat Website Warung Makan di Bali 2026 | BangBisnis",
+    metaDescription:
+      "Rincian lengkap harga jasa website untuk warung makan dan restoran di Bali. Mulai dari Rp 800.000 hingga Rp 3.500.000. Cari tahu mana yang sesuai budget Anda.",
+    category: "Panduan Harga",
+    readTime: 5,
+    publishDate: "2026-03-06",
+    excerpt:
+      "Punya warung makan di Bali dan ingin bikin website tapi bingung soal harga? Artikel ini membahas secara jujur semua komponen biaya, mulai dari domain hingga desain, dan paket mana yang cocok untuk bisnis kuliner Anda.",
+    content: `
       <p>Banyak pemilik warung makan dan restoran di Bali bertanya: <strong>"Berapa sih biaya buat website?"</strong> Jawaban jujurnya — tergantung kebutuhan. Tapi artikel ini akan membedah semua komponennya supaya kamu bisa planning budget dengan tepat.</p>
 
       <h2>Komponen Biaya Website Warung Makan</h2>
@@ -67,19 +67,19 @@ export const blogArticles: BlogArticle[] = [
       <p>Biaya buat website untuk warung makan di Bali mulai dari <strong>Rp 800.000</strong> untuk yang paling dasar, hingga <strong>Rp 3.500.000</strong> untuk yang paling lengkap. Untuk bisnis kuliner, kami sangat menyarankan setidaknya paket menengah yang sudah termasuk foto menu, integrasi WhatsApp, dan tampilan mobile-friendly.</p>
       <p>Masih bingung paket mana yang paling cocok? <strong>Konsultasi gratis via WhatsApp</strong> — ceritakan bisnis kamu dan kami bantu tentukan paket yang paling efisien.</p>
     `,
-    },
-    {
-        slug: "alasan-umkm-bali-wajib-punya-website-2026",
-        title: "5 Alasan UMKM Bali Wajib Punya Website di 2026",
-        metaTitle: "5 Alasan UMKM Bali Wajib Punya Website di 2026 | BangBisnis",
-        metaDescription:
-            "Di era digital 2026, UMKM Bali tanpa website rugi besar. Ini 5 alasan kenapa website bukan lagi opsional, tapi keharusan untuk bisnis lokal Bali yang mau bertahan dan berkembang.",
-        category: "Strategi Bisnis",
-        readTime: 4,
-        publishDate: "2026-03-06",
-        excerpt:
-            "Instagram dan WhatsApp Business sudah cukup? Ternyata tidak. Di 2026, UMKM Bali tanpa website ketinggalan kompetitor yang sudah bergerak lebih cepat. Ini 5 alasan yang perlu kamu ketahui sekarang.",
-        content: `
+  },
+  {
+    slug: "alasan-umkm-bali-wajib-punya-website-2026",
+    title: "5 Alasan UMKM Bali Wajib Punya Website di 2026",
+    metaTitle: "5 Alasan UMKM Bali Wajib Punya Website di 2026 | BangBisnis",
+    metaDescription:
+      "Di era digital 2026, UMKM Bali tanpa website rugi besar. Ini 5 alasan kenapa website bukan lagi opsional, tapi keharusan untuk bisnis lokal Bali yang mau bertahan dan berkembang.",
+    category: "Strategi Bisnis",
+    readTime: 4,
+    publishDate: "2026-03-06",
+    excerpt:
+      "Instagram dan WhatsApp Business sudah cukup? Ternyata tidak. Di 2026, UMKM Bali tanpa website ketinggalan kompetitor yang sudah bergerak lebih cepat. Ini 5 alasan yang perlu kamu ketahui sekarang.",
+    content: `
       <p>Di 2026, hampir semua konsumen — baik wisatawan asing maupun lokal — melakukan riset online sebelum membeli. Kalau bisnis kamu tidak muncul di pencarian Google, artinya kamu sedang <strong>secara aktif menolak calon pelanggan</strong>.</p>
       <p>Banyak pelaku UMKM di Bali masih berpikir: <em>"Saya sudah punya Instagram, sudah cukup."</em> Sayangnya, mindset ini memiliki celah besar. Berikut 5 alasan mengapa website wajib di 2026:</p>
 
@@ -107,19 +107,19 @@ export const blogArticles: BlogArticle[] = [
       <p>Kabar baiknya, membuat website profesional untuk UMKM di Bali tidak harus mahal. Dengan investasi mulai dari <strong>Rp 800.000</strong>, kamu sudah bisa punya website yang tampil profesional, mobile-friendly, dan siap muncul di pencarian Google.</p>
       <p>Jangan biarkan kompetitor selangkah lebih maju. Hubungi kami untuk <strong>konsultasi gratis</strong> dan temukan paket yang paling sesuai dengan kebutuhan bisnis kamu di Bali.</p>
     `,
-    },
-    {
-        slug: "website-vs-instagram-bisnis-kuliner-bali",
-        title: "Website vs Instagram: Mana yang Lebih Efektif untuk Bisnis Kuliner Bali?",
-        metaTitle: "Website vs Instagram untuk Bisnis Kuliner Bali | BangBisnis",
-        metaDescription:
-            "Perdebatan klasik: website atau Instagram untuk promosi bisnis kuliner di Bali? Temukan perbandingan jujur dan strategi terbaik yang sudah terbukti efektif untuk restoran dan kafe di Bali.",
-        category: "Strategi Digital",
-        readTime: 6,
-        publishDate: "2026-03-06",
-        excerpt:
-            "Restoran dan kafe di Bali sering dihadapkan pada pilihan: fokus ke Instagram atau bikin website dulu? Jawabannya tidak sesederhana memilih salah satu. Ini analisis lengkapnya.",
-        content: `
+  },
+  {
+    slug: "website-vs-instagram-bisnis-kuliner-bali",
+    title: "Website vs Instagram: Mana yang Lebih Efektif untuk Bisnis Kuliner Bali?",
+    metaTitle: "Website vs Instagram untuk Bisnis Kuliner Bali | BangBisnis",
+    metaDescription:
+      "Perdebatan klasik: website atau Instagram untuk promosi bisnis kuliner di Bali? Temukan perbandingan jujur dan strategi terbaik yang sudah terbukti efektif untuk restoran dan kafe di Bali.",
+    category: "Strategi Digital",
+    readTime: 6,
+    publishDate: "2026-03-06",
+    excerpt:
+      "Restoran dan kafe di Bali sering dihadapkan pada pilihan: fokus ke Instagram atau bikin website dulu? Jawabannya tidak sesederhana memilih salah satu. Ini analisis lengkapnya.",
+    content: `
       <p>Pertanyaan ini selalu muncul saat kami konsultasi dengan pemilik bisnis kuliner di Bali: <em>"Lebih baik fokus Instagram atau bikin website dulu?"</em> Setelah membantu puluhan bisnis kuliner go-online, kami punya jawabannya — dan mungkin tidak seperti yang kamu bayangkan.</p>
 
       <h2>Apa yang Instagram Lakukan dengan Sangat Baik</h2>
@@ -156,20 +156,34 @@ export const blogArticles: BlogArticle[] = [
       </ul>
 
       <h2>Perbandingan Langsung</h2>
-      <table>
-        <thead>
-          <tr><th>Aspek</th><th>Instagram</th><th>Website</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Visibilitas Google</td><td>❌ Sangat terbatas</td><td>✅ Optimal dengan SEO</td></tr>
-          <tr><td>Kontrol konten</td><td>⚠️ Tergantung algoritma</td><td>✅ 100% milik kamu</td></tr>
-          <tr><td>Menu lengkap</td><td>⚠️ Harus scroll lama</td><td>✅ Satu halaman rapi</td></tr>
-          <tr><td>Reservasi mudah</td><td>⚠️ Via DM manual</td><td>✅ Form/WhatsApp langsung</td></tr>
-          <tr><td>Kepercayaan calon tamu</td><td>⚠️ Tergantung followers</td><td>✅ Langsung profesional</td></tr>
-          <tr><td>Biaya jangka panjang</td><td>✅ Gratis (tapi perlu iklan)</td><td>⚠️ Ada biaya hosting/domain</td></tr>
-          <tr><td>Wisatawan asing</td><td>⚠️ Terbatas</td><td>✅ Sangat efektif</td></tr>
-        </tbody>
-      </table>
+      <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse border border-white/10 mt-6 mb-10">
+            <thead>
+              <tr class="bg-emerald-950/30">
+                <th class="p-4 border border-white/10 font-medium">Aspek</th>
+                <th class="p-4 border border-white/10 font-medium text-white/50">Instagram</th>
+                <th class="p-4 border border-white/10 font-medium text-emerald-400">Website</th>
+              </tr>
+            </thead>
+            <tbody class="text-[0.95em]">
+              <tr>
+                <td class="p-4 border border-white/10">Visibilitas Google</td>
+                <td class="p-4 border border-white/10">❌ Sangat terbatas</td>
+                <td class="p-4 border border-white/10">✅ Optimal dengan SEO</td>
+              </tr>
+              <tr>
+                <td class="p-4 border border-white/10">Kontrol konten</td>
+                <td class="p-4 border border-white/10">⚠️ Tergantung algoritma</td>
+                <td class="p-4 border border-white/10">✅ 100% milik kamu</td>
+              </tr>
+              <tr>
+                <td class="p-4 border border-white/10">Menu lengkap</td>
+                <td class="p-4 border border-white/10">⚠️ Harus scroll lama</td>
+                <td class="p-4 border border-white/10">✅ Tersusun rapi</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
 
       <h2>Strategi Terbaik: Keduanya, Tapi dengan Peran Berbeda</h2>
       <p>Pemenangnya bukan Instagram atau website — melainkan <strong>kombinasi keduanya dengan peran yang jelas</strong>:</p>
@@ -190,7 +204,55 @@ export const blogArticles: BlogArticle[] = [
 
       <h2>Kesimpulan</h2>
       <p>Untuk bisnis kuliner di Bali, <strong>Instagram efektif untuk membangun komunitas dan engagement, tapi website adalah aset jangka panjang yang mendatangkan pelanggan baru dari Google setiap hari</strong>. Keduanya saling melengkapi, bukan saling menggantikan.</p>
-      <p>Dengan investasi website mulai dari Rp 800.000, kamu sudah bisa mulai muncul di pencarian Google dan memberikan pengalaman yang lebih baik kepada calon pelanggan. <strong>Konsultasi gratis</strong> sekarang dan kami bantu strategi digital yang tepat untuk warung atau restoran kamu.</p>
+      <p>Dengan investasi website mulai dari Rp 800.000, kamu sudah bisa mulai muncul di pencarian Google dan memberikan pengalaman yang lebih baik kepada calon pelanggan. <a href="https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20tertarik%20konsultasi%20pembuatan%20website%20kuliner" target="_blank" rel="noopener noreferrer"><strong>Konsultasi gratis</strong></a> sekarang dan kami bantu strategi digital yang tepat untuk warung atau restoran kamu.</p>
     `,
-    },
+  },
+  {
+    slug: "cara-mendapatkan-klien-dari-google-seo-freelancer",
+    title: "Bukan Sekadar Traffic: Cara Praktis Mendapatkan Klien Pertama dari Google via SEO",
+    metaTitle: "Cara Dapat Klien dari Google (SEO) untuk Freelancer & Bisnis | BangBisnis",
+    metaDescription:
+      "Strategi praktis SEO B2B yang anti ribet. Cara membuat struktur website yang tidak hanya mendatangkan traffic, tapi mendatangkan klien berkualitas yang butuh jasamu.",
+    category: "Strategi SEO",
+    readTime: 7,
+    publishDate: "2026-03-07",
+    excerpt:
+      "Punya website dengan ribuan pengunjung per bulan tapi nol klien yang chat via WhatsApp? Artinya kamu mengundang orang yang salah. Ini bedanya traffic asal-asalan dengan traffic 'buyer intent'.",
+    content: `
+      <p>Mitos terbesar dalam dunia SEO adalah: <em>"Asal traffic tinggi, pasti klien datang."</em> Pada kenyataannya, banyak freelancer, konsultan, dan penyedia jasa B2B (termasuk biro tour, arsitek, dan agensi lokal) frustrasi karena websitenya ramai dibaca, namun HP-nya sepi orderan.</p>
+      <p>Mengapa? Karena mereka menargetkan audiens pencari informasi gratis, bukan audiens yang membawa dompet (sedang mencari jasa untuk disewa). Di artikel ini, saya akan membedah strategi <strong>Buyer-Intent SEO</strong> yang mendatangkan prospek berkualitas.</p>
+
+      <h2>1. Tinggalkan Kata Kunci "Cara" (How-To), Fokus ke "Jasa" (Service)</h2>
+      <p>Banyak penyedia jasa menghabiskan waktu menulis artikel panjang seperti <em>"Cara mendesain logo sendiri"</em> atau <em>"Cara membersihkan AC di rumah"</em>. Traffic-nya pasti meledak, tapi siapa yang membaca artikel itu?</p>
+      <p>Jawabannya: <strong>Orang yang ingin melakukannya sendiri (Do-It-Yourself) bukan orang yang ingin membayar jasa orang lain.</strong></p>
+      <p>Bandingkan dengan seseorang yang mengetik: <em>"Jasa service AC murah di Denpasar"</em> atau <em>"Harga jasa desain logo perusahaan"</em>. Volume pencariannya jauh lebih kecil, tapi mereka yang mengetik ini sudah berada di fase akhir (bottom of funnel) dan siap mentransfer uang ke vendor terbaik yang mereka temukan di halaman pertama Google.</p>
+
+      <div class="my-10 p-8 rounded-2xl bg-emerald-950/30 border border-emerald-500/20">
+        <h3 class="text-xl font-urbanist text-emerald-400 mb-4 tracking-widest text-sm">Action Plan:</h3>
+        <p class="text-white/80">Buatlah <strong>Halaman Layanan (Service Pages)</strong> spesifik untuk setiap variasi jasa kamu. Satu URL untuk satu jasa. Misalnya: <code>/jasa-pembuatan-website-bali</code>, atau <code>/jasa-website-umkm</code>.</p>
+      </div>
+
+      <h2>2. Rahasia SEO Lokal (Sebutkan Geografismu!)</h2>
+      <p>Google semakin pintar mencocokkan hasil pencarian dengan lokasi pembaca. Jika seseorang di Bali mencari pembuat website, Google akan memprioritaskan penyedia jasa lokal Bali terlepas sekuat apa pun agensi nasional di Jakarta.</p>
+      <p>Jika pasar utamamu menarget kawasan tertentu, sinyal lokal ini wajib ditanamkan di DNA websitemu:</p>
+      <ul>
+        <li>Sisipkan Nama Kota di Judul Halaman (Title Tag)</li>
+        <li>Sematkan peta Google Maps kantormu di Footer</li>
+        <li>Buat akun <strong>Google Business Profile</strong> (Google Maps) yang terhubung ke websitemu. Listing lokal ini sering muncul DI ATAS hasil pencarian organik biasa.</li>
+      </ul>
+
+      <h2>3. Jangan Hanya Pajang "Tentang Kami", Buktikan dengan "Portofolio Spesifik"</h2>
+      <p>Ketika pencari jasa mengklik website kamu dari Google, kredibilitasmu dinilai dalam 3 detik pertama. Mereka tidak peduli dengan visi misi perusahaanmu; mereka ingin tahu: <em>"Pernahkah orang ini mengerjakan proyek sejenis milikku?"</em></p>
+      <p>Strategi SEO cerdas: Buat halaman studi kasus terpisah untuk setiap proyek suksesmu. Gunakan URL yang mengandung keyword spesifik. Alih-alih <code>/portofolio-1</code>, buatlah <code>/website-restoran-warung-bambu</code>. Ini akan menarik kueri super-spesifik <em>("contoh desain website restoran")</em>.</p>
+
+      <h2>4. Permudah Langkah "Next Step" (Frictionless Conversion)</h2>
+      <p>Pernahkah kamu menemukan jasa yang bagus, tapi kamu malas menghubungi karena harus mengisi form kontak 15 kolom yang berbelit?</p>
+      <p>Di era sekarang, konversi terbaik terjadi di platform chating. Gunakan <strong>Floating WhatsApp Button</strong>. Hubungkan URL WhatsApp dengan teks pesan yang sudah terisi otomatis (Pre-filled text) seperti: <em>"Halo, saya melihat website Anda di Google dan tertarik berkonsultasi tentang Jasa X"</em>. Ini menurunkan beban kognitif klien secara drastis.</p>
+
+      <h2>Kesimpulan: Kualitas Jauh Mengalahkan Kuantitas</h2>
+      <p>Mendapatkan 30 pengunjung per bulan yang menghasilkan 2 order (Closing) jauh lebih bernilai dibanding 3.000 pengunjung namun nol pembelian. SEO untuk konversi berarti memahami pikiran klien yang sudah siap membeli.</p>
+      
+      <p>Jika kamu penyedia layanan lokal, UMKM, atau korporasi yang merasa traffic website saat ini salah sasaran, tim BangBisnis siap menstruktur ulang arsitektur logis websitemu. <a href="https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20perlu%20bantuan%20struktur%20SEO%20dan%20website%20untuk%20menarik%20klien" target="_blank" rel="noopener noreferrer"><strong>Diskusikan kebutuhan SEO On-Page websitemu bersama kami hari ini secara gratis.</strong></a></p>
+    `
+  }
 ];

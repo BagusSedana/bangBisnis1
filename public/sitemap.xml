@@ -81,4 +81,36 @@
     <priority>0.75</priority>
     <lastmod>2026-03-06</lastmod>
   </url>
+  <url>
+    <loc>https://bangbisnis.web.id/blog/cara-mendapatkan-klien-dari-google-seo-freelancer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+
+  <!-- Local SEO Pages -->
+  <url>
+    <loc>https://bangbisnis.web.id/jasa-website-denpasar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://bangbisnis.web.id/jasa-website-badung</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://bangbisnis.web.id/jasa-website-sanur</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://bangbisnis.web.id/jasa-website-gianyar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
 </urlset>

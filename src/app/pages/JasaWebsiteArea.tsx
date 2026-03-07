@@ -51,6 +51,11 @@ const areaData: AreaData = {
         name: "Uluwatu",
         target: "Beach Club, Surfing & Resort",
         desc: "Jangkau wisatawan dari seluruh dunia yang mencari pengalaman tak terlupakan di Uluwatu."
+    },
+    gianyar: {
+        name: "Gianyar",
+        target: "Seni, Kriya, & Ekowisata",
+        desc: "Bawa karya seni, kriya, dan bisnis ekowisata Anda di Gianyar ke audiens internasional melalui website."
     }
 };
 
