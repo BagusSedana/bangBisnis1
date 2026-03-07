@@ -16,30 +16,36 @@
     <lastmod>2026-03-06</lastmod>
   </url>
 
-  <!-- Service Pages -->
+  <!-- Jasa Website Company Profile -->
   <url>
-    <loc>https://bangbisnis.web.id/layanan/company-profile</loc>
+    <loc>https://bangbisnis.web.id/jasa-website-company-profile</loc>
+    <lastmod>2025-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-03-06</lastmod>
   </url>
+
+  <!-- Jasa Landing Page -->
   <url>
-    <loc>https://bangbisnis.web.id/layanan/landing-page</loc>
+    <loc>https://bangbisnis.web.id/jasa-landing-page-bali</loc>
+    <lastmod>2025-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-03-06</lastmod>
   </url>
+
+  <!-- Jasa Website UMKM -->
   <url>
-    <loc>https://bangbisnis.web.id/layanan/website-umkm</loc>
+    <loc>https://bangbisnis.web.id/jasa-website-umkm-bali</loc>
+    <lastmod>2025-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-03-06</lastmod>
   </url>
+
+  <!-- Integrasi WhatsApp -->
   <url>
-    <loc>https://bangbisnis.web.id/layanan/integrasi-whatsapp</loc>
+    <loc>https://bangbisnis.web.id/jasa-integrasi-whatsapp-bali</loc>
+    <lastmod>2025-01-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-03-06</lastmod>
+    <priority>0.8</priority>
   </url>
 
   <!-- Blog -->

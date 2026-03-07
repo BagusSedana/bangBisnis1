@@ -1,8 +1,21 @@
 import { motion } from "motion/react";
 import { ArrowRight, MessageCircle, PhoneCall, Bot, FastForward, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router";
+import { useEffect } from "react";
 
 export function IntegrasiWhatsApp() {
+    useEffect(() => {
+        document.title = "Jasa Integrasi WhatsApp Chat Website di Bali | BangBisnis";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Jasa integrasi WhatsApp ke website untuk bisnis di Bali. Mudahkan pelanggan menghubungi Anda secara instan dan tingkatkan konversi penjualan dengan tombol chat floating.");
+        } else {
+            const meta = document.createElement("meta");
+            meta.name = "description";
+            meta.content = "Jasa integrasi WhatsApp ke website untuk bisnis di Bali. Mudahkan pelanggan menghubungi Anda secara instan dan tingkatkan konversi penjualan dengan tombol chat floating.";
+            document.head.appendChild(meta);
+        }
+    }, []);
     const whatsappUrl =
         "https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20butuh%20bantuan%20terkait%20Integrasi%20WhatsApp%20untuk%20website%20saya.";
 
@@ -116,6 +129,33 @@ export function IntegrasiWhatsApp() {
                     </a>
                 </motion.div>
             </div>
+
+            {/* Service Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Jasa Integrasi WhatsApp Website",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "BangBisnis",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Denpasar",
+                                "addressRegion": "Bali",
+                                "addressCountry": "ID"
+                            }
+                        },
+                        "areaServed": {
+                            "@type": "State",
+                            "name": "Bali"
+                        },
+                        "description": "Jasa pengaturan dan integrasi tombol chat WhatsApp langsung ke website bisnis Anda untuk mempercepat komunikasi dengan pelanggan."
+                    })
+                }}
+            />
         </div>
     );
 }

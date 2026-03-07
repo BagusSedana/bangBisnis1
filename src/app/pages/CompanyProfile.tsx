@@ -1,8 +1,21 @@
 import { motion } from "motion/react";
 import { Check, ArrowRight, MessageCircle, Star, Globe, TrendingUp, ShieldCheck } from "lucide-react";
 import { Link } from "react-router";
+import { useEffect } from "react";
 
 export function CompanyProfile() {
+    useEffect(() => {
+        document.title = "Jasa Pembuatan Website Company Profile di Bali | BangBisnis";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Jasa pembuatan website company profile premium di Bali. Tampilkan citra profesional perusahaan Anda untuk memenangkan kepercayaan klien dan investor global.");
+        } else {
+            const meta = document.createElement("meta");
+            meta.name = "description";
+            meta.content = "Jasa pembuatan website company profile premium di Bali. Tampilkan citra profesional perusahaan Anda untuk memenangkan kepercayaan klien dan investor global.";
+            document.head.appendChild(meta);
+        }
+    }, []);
     const whatsappUrl =
         "https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20ingin%20konsultasi%20jasa%20website%20Company%20Profile%20untuk%20bisnis%20saya.";
 
@@ -116,6 +129,33 @@ export function CompanyProfile() {
                     </a>
                 </motion.div>
             </div>
+
+            {/* Service Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Jasa Pembuatan Website Company Profile",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "BangBisnis",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Denpasar",
+                                "addressRegion": "Bali",
+                                "addressCountry": "ID"
+                            }
+                        },
+                        "areaServed": {
+                            "@type": "State",
+                            "name": "Bali"
+                        },
+                        "description": "Jasa pembuatan website company profile premium untuk perusahaan di Bali yang ingin membangun kredibilitas dan memenangkan kepercayaan klien."
+                    })
+                }}
+            />
         </div>
     );
 }

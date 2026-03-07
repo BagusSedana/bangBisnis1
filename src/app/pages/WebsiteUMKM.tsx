@@ -1,8 +1,21 @@
 import { motion } from "motion/react";
 import { ArrowRight, MessageCircle, Store, MapPin, ScanHeart, Headphones } from "lucide-react";
 import { Link } from "react-router";
+import { useEffect } from "react";
 
 export function WebsiteUMKM() {
+    useEffect(() => {
+        document.title = "Jasa Website UMKM & Bisnis Lokal di Bali | BangBisnis";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Jasa pembuatan website murah dan profesional untuk UMKM di Bali. Tingkatkan penjualan lokal Anda dengan website yang mudah ditemukan di Google Maps & Pencarian.");
+        } else {
+            const meta = document.createElement("meta");
+            meta.name = "description";
+            meta.content = "Jasa pembuatan website murah dan profesional untuk UMKM di Bali. Tingkatkan penjualan lokal Anda dengan website yang mudah ditemukan di Google Maps & Pencarian.";
+            document.head.appendChild(meta);
+        }
+    }, []);
     const whatsappUrl =
         "https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20punya%20UMKM%20di%20Bali%20dan%20ingin%20konsultasi%20pembuatan%20website.";
 
@@ -116,6 +129,33 @@ export function WebsiteUMKM() {
                     </a>
                 </motion.div>
             </div>
+
+            {/* Service Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Jasa Pembuatan Website UMKM",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "BangBisnis",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Denpasar",
+                                "addressRegion": "Bali",
+                                "addressCountry": "ID"
+                            }
+                        },
+                        "areaServed": {
+                            "@type": "State",
+                            "name": "Bali"
+                        },
+                        "description": "Jasa pembuatan website murah dan profesional khusus untuk UMKM dan bisnis lokal di Bali agar mudah ditemukan pelanggan di Google."
+                    })
+                }}
+            />
         </div>
     );
 }

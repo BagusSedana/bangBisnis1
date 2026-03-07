@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Check, ArrowRight, MessageCircle, Star } from "lucide-react";
 import { Link } from "react-router";
+import { useEffect } from "react";
 
 const faqs = [
     {
@@ -39,6 +40,19 @@ const services = [
 ];
 
 export function JasaWebsiteBali() {
+    useEffect(() => {
+        document.title = "Jasa Pembuatan Website Profesional di Bali | BangBisnis";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Jasa pembuatan website profesional di Bali untuk UMKM dan bisnis. Desain modern, SEO friendly, mobile responsif, dan siap membantu mendatangkan pelanggan baru.");
+        } else {
+            const meta = document.createElement("meta");
+            meta.name = "description";
+            meta.content = "Jasa pembuatan website profesional di Bali untuk UMKM dan bisnis. Desain modern, SEO friendly, mobile responsif, dan siap membantu mendatangkan pelanggan baru.";
+            document.head.appendChild(meta);
+        }
+    }, []);
+
     const whatsappUrl =
         "https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20ingin%20konsultasi%20jasa%20website%20untuk%20bisnis%20saya%20di%20Bali.";
 
@@ -421,6 +435,49 @@ export function JasaWebsiteBali() {
                     </Link>
                 </div>
             </footer>
+
+            {/* Service & FAQ Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: `[
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Service",
+                            "serviceType": "Jasa Pembuatan Website",
+                            "provider": {
+                                "@type": "LocalBusiness",
+                                "name": "BangBisnis",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Denpasar",
+                                    "addressRegion": "Bali",
+                                    "addressCountry": "ID"
+                                }
+                            },
+                            "areaServed": {
+                                "@type": "State",
+                                "name": "Bali"
+                            },
+                            "description": "Jasa pembuatan website profesional, company profile, dan landing page khusus untuk UMKM dan bisnis di wilayah Bali."
+                        },
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "FAQPage",
+                            "mainEntity": [
+                                ${faqs.map(faq => `{
+                                    "@type": "Question",
+                                    "name": "${faq.q}",
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": "${faq.a}"
+                                    }
+                                }`).join(',')}
+                            ]
+                        }
+                    ]`
+                }}
+            />
         </div>
     );
 }

@@ -1,8 +1,21 @@
 import { motion } from "motion/react";
 import { Check, ArrowRight, MessageCircle, Target, BarChart, MousePointerClick, TrendingUp } from "lucide-react";
 import { Link } from "react-router";
+import { useEffect } from "react";
 
 export function LandingPage() {
+    useEffect(() => {
+        document.title = "Jasa Pembuatan Landing Page Profesional di Bali | BangBisnis";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Jasa pembuatan landing page konversi tinggi di Bali. Tingkatkan ROI iklan Meta/TikTok Anda dengan copywriting persuasif dan desain yang memaksa pengunjung beli.");
+        } else {
+            const meta = document.createElement("meta");
+            meta.name = "description";
+            meta.content = "Jasa pembuatan landing page konversi tinggi di Bali. Tingkatkan ROI iklan Meta/TikTok Anda dengan copywriting persuasif dan desain yang memaksa pengunjung beli.";
+            document.head.appendChild(meta);
+        }
+    }, []);
     const whatsappUrl =
         "https://wa.me/6287701785344?text=Halo%20BangBisnis%2C%20saya%20ingin%20konsultasi%20pembuatan%20Landing%20Page%20untuk%20meningkatkan%20penjualan.";
 
@@ -116,6 +129,33 @@ export function LandingPage() {
                     </a>
                 </motion.div>
             </div>
+
+            {/* Service Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Jasa Pembuatan Landing Page",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "BangBisnis",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Denpasar",
+                                "addressRegion": "Bali",
+                                "addressCountry": "ID"
+                            }
+                        },
+                        "areaServed": {
+                            "@type": "State",
+                            "name": "Bali"
+                        },
+                        "description": "Jasa pembuatan landing page konversi tinggi di Bali untuk memaksimalkan ROI iklan Meta dan TikTok Anda."
+                    })
+                }}
+            />
         </div>
     );
 }

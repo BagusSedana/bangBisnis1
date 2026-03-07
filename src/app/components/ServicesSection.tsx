@@ -22,28 +22,28 @@ const services = [
     title: "Company Profile",
     desc: "Website profil perusahaan yang menampilkan identitas bisnis secara profesional dan terpercaya.",
     thumb: thumbCompany,
-    href: "/layanan/company-profile"
+    href: "/jasa-website-company-profile"
   },
   {
     icon: Layers,
     title: "Landing Page",
     desc: "Halaman tujuan yang dirancang khusus untuk konversi — jelas, fokus, dan efektif.",
     thumb: thumbLanding,
-    href: "/layanan/landing-page"
+    href: "/jasa-landing-page-bali"
   },
   {
     icon: Store,
     title: "Website UMKM",
     desc: "Solusi website lengkap untuk usaha kecil dan menengah di Bali.",
     thumb: thumbUmkm,
-    href: "/layanan/website-umkm"
+    href: "/jasa-website-umkm-bali"
   },
   {
     icon: MessageCircle,
     title: "Integrasi WhatsApp",
     desc: "Tombol kontak langsung di website agar pelanggan bisa menghubungi Anda dengan mudah.",
     thumb: thumbWa,
-    href: "/layanan/integrasi-whatsapp"
+    href: "/jasa-integrasi-whatsapp-bali"
   },
 ];
 

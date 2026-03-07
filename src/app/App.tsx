@@ -79,10 +79,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/jasa-website-bali" element={<JasaWebsiteBali />} />
-        <Route path="/layanan/company-profile" element={<CompanyProfile />} />
-        <Route path="/layanan/landing-page" element={<LandingPage />} />
-        <Route path="/layanan/website-umkm" element={<WebsiteUMKM />} />
-        <Route path="/layanan/integrasi-whatsapp" element={<IntegrasiWhatsApp />} />
+        <Route path="/jasa-website-company-profile" element={<CompanyProfile />} />
+        <Route path="/jasa-landing-page-bali" element={<LandingPage />} />
+        <Route path="/jasa-website-umkm-bali" element={<WebsiteUMKM />} />
+        <Route path="/jasa-integrasi-whatsapp-bali" element={<IntegrasiWhatsApp />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
