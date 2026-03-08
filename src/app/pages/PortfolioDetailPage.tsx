@@ -5,6 +5,9 @@ import { MessageCircle, ArrowLeft, ExternalLink, ChevronRight, CheckCircle2 } fr
 import { portfolioProjects } from "../data/portfolioData";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { WarungBambuPortfolio } from "./portfolios/WarungBambu";
+import { VillaSerenityPortfolio } from "./portfolios/VillaSerenity";
+import { TravelJimbPortfolio } from "./portfolios/TravelJimb";
 
 export function PortfolioDetailPage() {
     const { slug } = useParams();
@@ -128,7 +131,13 @@ export function PortfolioDetailPage() {
                     prose-strong:text-white prose-strong:font-semibold
                     prose-a:text-emerald-500 prose-a:no-underline hover:prose-a:text-emerald-400">
 
-                    {project.content ? (
+                    {project.slug === "website-restoran-warung-bambu" ? (
+                        <WarungBambuPortfolio />
+                    ) : project.slug === "website-villa-serenity-ubud" ? (
+                        <VillaSerenityPortfolio />
+                    ) : project.slug === "website-travel-tour-traveljimb" ? (
+                        <TravelJimbPortfolio />
+                    ) : project.content ? (
                         <div dangerouslySetInnerHTML={{ __html: project.content }} />
                     ) : (
                         <p>Detail studi kasus untuk proyek ini sedang dalam tahap dokumentasi. Silakan hubungi kami untuk informasi lebih lanjut mengenai proses pembuatan website ini.</p>
