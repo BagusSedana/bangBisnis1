@@ -138,6 +138,112 @@ export function LandingPage() {
                             <li><strong className="text-white/80">Penyajian Solusi & Bukti Sosial:</strong> Setelah mereka setuju bahwa mereka memiliki masalah, barulah kami menyodorkan produk Anda sebagai solusi absolut—didukung oleh testimoni riil (bukan <i>fake reviews</i>) untuk meredam rasa skeptis.</li>
                         </ul>
 
+                        {/* Interactive UI: Animated Funnel */}
+                        <div className="my-14 bg-[#0a0f0d] border border-emerald-500/10 rounded-3xl p-8 md:p-12 shadow-[0_0_40px_-15px_rgba(16,185,129,0.1)] relative overflow-hidden">
+                            <div className="absolute top-0 right-1/2 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full mix-blend-screen" />
+
+                            <div className="text-center mb-10 relative z-10">
+                                <h4 className="text-white text-xl font-['Urbanist'] mb-2">Simulasi Kebocoran Konversi</h4>
+                                <p className="text-white/40 text-sm max-w-sm mx-auto">Lihat bagaimana 10,000 klik menghilang karena desain yang buruk vs Arsitektur Landing Page BangBisnis.</p>
+                            </div>
+
+                            <div className="flex flex-col gap-3 relative z-10 max-w-md mx-auto">
+                                {/* Funnel Step 1 */}
+                                <motion.div
+                                    className="bg-neutral-900 border border-neutral-800 rounded-xl p-4 flex items-center justify-between"
+                                    initial={{ opacity: 0, y: -20, width: "110%" }}
+                                    whileInView={{ opacity: 1, y: 0, width: "100%" }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 0.1 }}
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                                            <MousePointerClick size={16} />
+                                        </div>
+                                        <div>
+                                            <p className="text-white text-sm font-bold">Traffic dari Iklan Masuk</p>
+                                            <p className="text-white/40 text-[10px]">Klik dari Meta/TikTok Ads</p>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className="text-white font-bold">10,000</p>
+                                        <p className="text-white/40 text-[10px]">Pengunjung</p>
+                                    </div>
+                                </motion.div>
+
+                                {/* Arrow Down */}
+                                <motion.div
+                                    className="mx-auto w-0.5 h-6 bg-gradient-to-b from-neutral-800 to-transparent"
+                                    initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
+                                />
+
+                                {/* Funnel Step 2 */}
+                                <motion.div
+                                    className="bg-neutral-900 border border-neutral-800 rounded-xl p-4 flex items-center justify-between mx-auto w-[90%]"
+                                    initial={{ opacity: 0, y: -20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 0.7 }}
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center shrink-0">
+                                            <TrendingUp size={16} />
+                                        </div>
+                                        <div>
+                                            <p className="text-white text-sm font-bold">Bertahan &gt; 3 Detik</p>
+                                            <p className="text-white/40 text-[10px]">Membaca penawaran Anda</p>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className="text-white font-bold text-orange-400 opacity-50 line-through text-xs mb-0.5">800</p>
+                                        <p className="text-white font-bold">4,500</p>
+                                    </div>
+                                </motion.div>
+
+                                {/* Arrow Down */}
+                                <motion.div
+                                    className="mx-auto w-0.5 h-6 bg-gradient-to-b from-neutral-800 to-transparent"
+                                    initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 1 }}
+                                />
+
+                                {/* Funnel Step 3 */}
+                                <motion.div
+                                    className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-4 flex items-center justify-between mx-auto w-[80%] relative overflow-hidden"
+                                    initial={{ opacity: 0, y: -20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 1.3 }}
+                                >
+                                    <motion.div
+                                        className="absolute inset-0 bg-emerald-500/20"
+                                        initial={{ x: "-100%" }}
+                                        whileInView={{ x: "100%" }}
+                                        transition={{ duration: 1.5, repeat: Infinity, ease: "linear", delay: 1.5 }}
+                                    />
+                                    <div className="flex items-center gap-3 relative z-10">
+                                        <div className="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                                            <Check size={16} />
+                                        </div>
+                                        <div>
+                                            <p className="text-white text-sm font-bold">Konversi (Membeli)</p>
+                                            <p className="text-emerald-400/60 text-[10px] uppercase tracking-wider font-bold">Hasil BangBisnis</p>
+                                        </div>
+                                    </div>
+                                    <div className="text-right flex flex-col items-end relative z-10">
+                                        <p className="text-white/40 text-xs line-through mb-0.5">50 (*Web Biasa*)</p>
+                                        <motion.p
+                                            className="text-emerald-400 font-bold text-lg"
+                                            initial={{ scale: 1 }}
+                                            whileInView={{ scale: [1, 1.2, 1] }}
+                                            transition={{ duration: 0.5, delay: 1.8 }}
+                                        >
+                                            1,200
+                                        </motion.p>
+                                    </div>
+                                </motion.div>
+                            </div>
+                        </div>
+
                         <h3 className="text-white text-2xl font-['Urbanist'] mt-10 mb-4 tracking-tight">Perang Melawan Kinerja Muat (Loading Speed)</h3>
                         <p>
                             Tahukah Anda bahwa *Bounce Rate* (rasio pengunjung yang langsung kabur) meningkat sebesar 32% setiap penambahan detik saat website *loading*? Pengguna TikTok dan Instagram memiliki rentang perhatian yang sangat pendek.

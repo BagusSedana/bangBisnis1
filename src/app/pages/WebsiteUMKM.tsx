@@ -145,6 +145,68 @@ export function WebsiteUMKM() {
                             <li><strong className="text-white/80">Integrasi Google Business Profile:</strong> Kami mengawinkan website Anda dengan titik Google Maps. Setiap ulasan baru, foto produk, dan artikel yang kita masukkan akan mengangkat ranking peta Anda naik di atas kompetitor tetangga.</li>
                             <li><strong className="text-white/80">Tampilan Mobile-First:</strong> 92% turis di Bali mencari makan dan layanan lewat layar HP sambil berjalan atau di atas motor. Website ringan yang pas di genggaman, dengan tombol klik-ke-Gojek atau WhatsApp adalah keharusan.</li>
                         </ul>
+
+                        {/* Interactive UI: Local SEO Radar */}
+                        <div className="my-14 bg-neutral-900/50 border border-white/10 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm group">
+                            <div className="text-center mb-8 relative z-20">
+                                <h4 className="text-white text-xl font-['Urbanist'] mb-2">Simulasi Radius <span className="text-emerald-400">Local SEO</span></h4>
+                                <p className="text-white/40 text-sm max-w-sm mx-auto">Lihat bagaimana website teroptimasi menangkap pelanggan di sekitar titik Google Maps Anda.</p>
+                            </div>
+
+                            {/* Radar Canvas */}
+                            <div className="relative w-full h-[300px] bg-[#050505] rounded-2xl border border-white/5 overflow-hidden flex items-center justify-center">
+                                {/* Grid Map Background */}
+                                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+
+                                {/* Concentric Radar Rings */}
+                                {[...Array(3)].map((_, i) => (
+                                    <motion.div
+                                        key={i}
+                                        className="absolute w-12 h-12 rounded-full border border-emerald-500/40"
+                                        initial={{ scale: 1, opacity: 0.8 }}
+                                        animate={{ scale: 8, opacity: 0 }}
+                                        transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: i * 1 }}
+                                    />
+                                ))}
+
+                                {/* Center Pin (UMKM Business) */}
+                                <div className="absolute z-10 w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(16,185,129,0.5)]">
+                                    <Store size={20} className="text-white" />
+                                </div>
+                                <div className="absolute z-10 top-[calc(50%+30px)] bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-emerald-500/30 text-[10px] text-emerald-400 font-bold whitespace-nowrap">
+                                    Titik Toko Anda
+                                </div>
+
+                                {/* Customer Pings (Phones) */}
+                                {[
+                                    { top: "20%", left: "30%", delay: 0.5, dist: "300m" },
+                                    { top: "70%", left: "75%", delay: 1.2, dist: "1.2km" },
+                                    { top: "40%", left: "80%", delay: 2.5, dist: "800m" },
+                                    { top: "80%", left: "20%", delay: 0.8, dist: "2km" },
+                                    { top: "30%", left: "60%", delay: 1.8, dist: "500m" },
+                                ].map((customer, idx) => (
+                                    <motion.div
+                                        key={idx}
+                                        className="absolute flex flex-col items-center"
+                                        style={{ top: customer.top, left: customer.left }}
+                                        initial={{ opacity: 0, scale: 0 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: customer.delay }}
+                                    >
+                                        <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20 relative">
+                                            <motion.div
+                                                className="absolute inset-0 bg-emerald-500/20 rounded-full"
+                                                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                                                transition={{ duration: 2, repeat: Infinity }}
+                                            />
+                                            <span className="text-[12px]">📱</span>
+                                        </div>
+                                        <span className="mt-1 text-[9px] text-white/50 bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">Turis ({customer.dist})</span>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
 

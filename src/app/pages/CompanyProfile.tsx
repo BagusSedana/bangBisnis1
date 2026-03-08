@@ -139,6 +139,104 @@ export function CompanyProfile() {
                                 <li><strong className="text-white/80">Desain Monolitik & Kredibel:</strong> Alih-alih menggunakan template ceria hasil *drag-and-drop* murahan, kami menggunakan hierarki tipografi tegas, *white-space* yang bernapas, dan palet warna korporat yang memancarkan dominasi.</li>
                             </ul>
 
+                            {/* Interactive UI: Animated ROI Chart */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                className="my-12 bg-[#0f0f0f] border border-white/10 rounded-2xl p-6 md:p-10 shadow-2xl relative overflow-hidden group"
+                            >
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[80px] rounded-full mix-blend-screen transition-all duration-700 group-hover:bg-emerald-500/10" />
+
+                                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 relative z-10">
+                                    <div>
+                                        <h4 className="text-white text-lg font-['Urbanist'] mb-1">Trajektori Kepercayaan Klien (Trust ROI)</h4>
+                                        <p className="text-white/40 text-sm">Presentasi PDF vs Website Premium Interaktif</p>
+                                    </div>
+                                    <div className="mt-4 md:mt-0 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
+                                        <p className="text-emerald-400 text-xs font-bold tracking-widest uppercase">Tingkat Penutupan Deal +300%</p>
+                                    </div>
+                                </div>
+
+                                {/* Graph Area */}
+                                <div className="relative h-48 md:h-64 w-full border-b border-l border-white/10 pt-4 pb-0 pl-0 mt-4 flex items-end">
+                                    {/* Y-Axis Labels */}
+                                    <div className="absolute -left-8 top-0 bottom-0 flex flex-col justify-between text-[10px] text-white/30 h-full py-2">
+                                        <span>Tinggi</span>
+                                        <span>Sedang</span>
+                                        <span>Rendah</span>
+                                    </div>
+
+                                    {/* SVG Drawing Area */}
+                                    <svg className="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 100 100">
+                                        <defs>
+                                            <linearGradient id="roiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" stopColor="#10b981" stopOpacity="0.2" />
+                                                <stop offset="100%" stopColor="#10b981" stopOpacity="1" />
+                                            </linearGradient>
+                                            <linearGradient id="pdfGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" stopColor="#525252" stopOpacity="0.5" />
+                                                <stop offset="100%" stopColor="#262626" stopOpacity="0.8" />
+                                            </linearGradient>
+                                        </defs>
+
+                                        {/* Grid Lines */}
+                                        <line x1="0" y1="20" x2="100" y2="20" stroke="rgba(255,255,255,0.05)" strokeWidth="0.5" strokeDasharray="2,2" />
+                                        <line x1="0" y1="50" x2="100" y2="50" stroke="rgba(255,255,255,0.05)" strokeWidth="0.5" strokeDasharray="2,2" />
+                                        <line x1="0" y1="80" x2="100" y2="80" stroke="rgba(255,255,255,0.05)" strokeWidth="0.5" strokeDasharray="2,2" />
+
+                                        {/* Web Premium Line (Animated) */}
+                                        <motion.path
+                                            d="M0,90 C30,85 50,40 100,10"
+                                            fill="none"
+                                            stroke="url(#roiGradient)"
+                                            strokeWidth="3"
+                                            initial={{ pathLength: 0, opacity: 0 }}
+                                            whileInView={{ pathLength: 1, opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                                        />
+
+                                        {/* Status Quo PDF Line (Static/Slightly animated) */}
+                                        <motion.path
+                                            d="M0,85 C40,85 70,80 100,75"
+                                            fill="none"
+                                            stroke="url(#pdfGradient)"
+                                            strokeWidth="2"
+                                            strokeDasharray="4 4"
+                                            initial={{ pathLength: 0, opacity: 0 }}
+                                            whileInView={{ pathLength: 1, opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.6 }}
+                                        />
+
+                                        {/* Data Points */}
+                                        <motion.circle
+                                            cx="100" cy="10" r="2.5" fill="#10b981"
+                                            initial={{ scale: 0, opacity: 0 }}
+                                            whileInView={{ scale: 1, opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.5, delay: 1.7 }}
+                                        />
+                                    </svg>
+
+                                    {/* X-Axis Labels */}
+                                    <div className="absolute -bottom-6 left-0 right-0 flex justify-between text-[10px] text-white/30 px-2">
+                                        <span>Kirim Profil</span>
+                                        <span>Proses Review</span>
+                                        <span>Keputusan Deal</span>
+                                    </div>
+                                </div>
+                                <div className="mt-10 flex gap-6 text-xs text-white/40 justify-center">
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-3 h-3 rounded-full bg-emerald-500" /> Web BangBisnis
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-3 h-3 rounded-full bg-neutral-600 border border-neutral-500" /> Brosur PDF
+                                    </div>
+                                </div>
+                            </motion.div>
+
                             <h3 className="text-white text-2xl font-['Urbanist'] mt-10 mb-4 tracking-tight">Biaya vs Investasi Reputasi</h3>
                             <p>
                                 Menghemat beberapa juta rupiah untuk menyewa "tukang ketik web" pemula demi membuat <i>Company Profile</i> adalah keputusan bunuh diri secara bisnis. Mengapa? Karena ketika klien korporat Anda membandingkan presentasi Anda dengan kompetitor yang memiliki website setara standar luar negeri, Anda sudah kalah sebelum meja negosiasi dibuka.
