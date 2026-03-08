@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Check, ArrowRight, MessageCircle, Star, Globe, TrendingUp, ShieldCheck } from "lucide-react";
+import { Check, ArrowRight, MessageCircle, Star, Globe, TrendingUp, ShieldCheck, BookOpen } from "lucide-react";
 import { Link } from "react-router";
 import { useEffect } from "react";
 
@@ -111,6 +111,42 @@ export function CompanyProfile() {
                                 <p className="text-white/40 text-[0.9rem] leading-relaxed">{item.desc}</p>
                             </motion.div>
                         ))}
+                    </div>
+                    {/* Deep-Dive Article Section */}
+                    <div className="mt-32 pt-20 border-t border-white/[0.06] max-w-4xl mx-auto">
+                        <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-[10px] tracking-[0.15em] uppercase">
+                            <BookOpen size={14} /> BangBisnis Insights
+                        </div>
+                        <h2 className="text-white text-3xl md:text-4xl mb-8 font-['Urbanist'] leading-tight tracking-tight">
+                            Membongkar Rahasia <span className="text-emerald-400 italic">Company Profile</span> yang Menghasilkan Kontrak Miliaran
+                        </h2>
+
+                        <div className="space-y-6 text-white/50 text-[1.05rem] leading-relaxed font-light">
+                            <p>
+                                Dalam dunia B2B (Business-to-Business) di Bali, tender proyek korporat atau investasi skala besar seringkali diputuskan bukan hanya dari kualitas produk, melainkan dari <strong className="text-white/80 font-medium">seberapa besar rasa aman (trust)</strong> yang bisa diberikan oleh vendor.
+                            </p>
+                            <p>
+                                Banyak perusahaan konstruksi, firma hukum, atau distributor besar di Denpasar yang masih mengirimkan <i>Company Profile</i> dalam bentuk PDF sebesar 25MB via WhatsApp. Masalahnya? Proyek-proyek bernilai tinggi digawangi oleh eksekutif yang sibuk. Mereka tidak punya waktu untuk mengunduh dan membaca brosur kaku di layar ponsel mereka.
+                            </p>
+
+                            <h3 className="text-white text-2xl font-['Urbanist'] mt-10 mb-4 tracking-tight">Anatomi Kesan Pertama Digital</h3>
+                            <p>
+                                Website <i>Company Profile</i> yang dirancang oleh BangBisnis bertindak sebagai lobi kantor bintang lima di dunia maya. Kami menerapkan tiga elemen krusial:
+                            </p>
+                            <ul className="list-disc pl-5 space-y-3 mt-4 text-white/60 text-[0.95rem]">
+                                <li><strong className="text-white/80">Struktur Bukti Sosial (Social Proof Architecture):</strong> Kami tidak sekadar menaruh logo klien. Kami merancang desain tata letak yang memaksa mata pengunjung melihat langsung ke portofolio mahakarya Anda dan testimoni tokoh-tokoh kunci.</li>
+                                <li><strong className="text-white/80">Navigasi Tanpa Friksi:</strong> Klien potensial bisa melihat legalitas perusahaan, struktur tim direksi, dan mengontak *Project Manager* Anda dalam 2 kali klik. Tanpa *loading* panjang.</li>
+                                <li><strong className="text-white/80">Desain Monolitik & Kredibel:</strong> Alih-alih menggunakan template ceria hasil *drag-and-drop* murahan, kami menggunakan hierarki tipografi tegas, *white-space* yang bernapas, dan palet warna korporat yang memancarkan dominasi.</li>
+                            </ul>
+
+                            <h3 className="text-white text-2xl font-['Urbanist'] mt-10 mb-4 tracking-tight">Biaya vs Investasi Reputasi</h3>
+                            <p>
+                                Menghemat beberapa juta rupiah untuk menyewa "tukang ketik web" pemula demi membuat <i>Company Profile</i> adalah keputusan bunuh diri secara bisnis. Mengapa? Karena ketika klien korporat Anda membandingkan presentasi Anda dengan kompetitor yang memiliki website setara standar luar negeri, Anda sudah kalah sebelum meja negosiasi dibuka.
+                            </p>
+                            <p>
+                                Kehadiran online yang premium bukanlah pengeluaran operasional; ia adalah aset tenaga *sales* yang tidak pernah tidur, tidak pernah sakit, dan tidak pernah gagal mempresentasikan wajah terbaik dari perusahaan Anda.
+                            </p>
+                        </div>
                     </div>
                 </div>
 

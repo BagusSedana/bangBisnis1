@@ -2,6 +2,10 @@ import { useParams, Link } from "react-router";
 import { useEffect } from "react";
 import { motion } from "motion/react";
 import { MessageCircle, ArrowRight, Check, Star, TrendingUp, Users, Target, ShieldCheck } from "lucide-react";
+import { Denpasar } from "./areas/Denpasar";
+import { Badung } from "./areas/Badung";
+import { Sanur } from "./areas/Sanur";
+import { Gianyar } from "./areas/Gianyar";
 
 type AreaData = {
     [key: string]: {
@@ -164,6 +168,11 @@ export function JasaWebsiteArea() {
     const pathSegments = window.location.pathname.split('-');
     const lokasi = pathSegments[pathSegments.length - 1] || "denpasar";
     const areaKey = lokasi.toLowerCase().replace("-", "_");
+
+    if (areaKey === "denpasar") return <Denpasar />;
+    if (areaKey === "badung") return <Badung />;
+    if (areaKey === "sanur") return <Sanur />;
+    if (areaKey === "gianyar") return <Gianyar />;
 
     // Fallback if not in predefined list
     const area = areaData[areaKey] || {

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, MessageCircle, PhoneCall, Bot, FastForward, CheckCircle2 } from "lucide-react";
+import { ArrowRight, MessageCircle, PhoneCall, Bot, FastForward, CheckCircle2, BookOpen } from "lucide-react";
 import { Link } from "react-router";
 import { useEffect } from "react";
 
@@ -111,6 +111,44 @@ export function IntegrasiWhatsApp() {
                                 <p className="text-white/40 text-[0.9rem] leading-relaxed">{item.desc}</p>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+
+                {/* Deep-Dive Article Section */}
+                <div className="mt-32 pt-20 border-t border-white/[0.06] max-w-4xl mx-auto">
+                    <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-[10px] tracking-[0.15em] uppercase">
+                        <BookOpen size={14} /> BangBisnis Insights
+                    </div>
+                    <h2 className="text-white text-3xl md:text-4xl mb-8 font-['Urbanist'] leading-tight tracking-tight">
+                        Menyulap WhatsApp Menjadi <span className="text-emerald-400 italic">Mesin Kasir Otomatis</span> 24 Jam
+                    </h2>
+
+                    <div className="space-y-6 text-white/50 text-[1.05rem] leading-relaxed font-light">
+                        <p>
+                            Bagi sebagian besar masyarakat Indonesia, transaksi e-commerce konvensional (*tambah ke keranjang, isi form panjang, transfer virtual account*) terkadang terasa terlalu kaku dan impersonal. Budaya konsumen lokal sangat kental dengan tawar-menawar, bertanya soal stok spesifik, dan membangun "rasa cocok" dengan penjual sebelum mentransfer uang. Disinilah *Conversational Commerce* (Perdagangan Berbasis Obrolan) lewat WhatsApp mendikte pasar.
+                        </p>
+
+                        <h3 className="text-white text-2xl font-['Urbanist'] mt-10 mb-4 tracking-tight">Lubang Bocor di Saluran Penjualan Anda</h3>
+                        <p>
+                            Namun, mengandalkan WhatsApp biasa saja tanpa integrasi di website adalah sebuah kesalahan fatal. Mengapa? Karena calon pelanggan (*leads*) jarang mau repot:
+                        </p>
+                        <ol className="list-decimal pl-5 space-y-3 mt-4 text-white/60 text-[0.95rem]">
+                            <li>Melihat nomor HP di *bio* Instagram.</li>
+                            <li>Menyalin nomor tersebut, atau lebih parah, mengetiknya ulang secara manual.</li>
+                            <li>Menyimpannya ke buku kontak agar muncul di WhatsApp.</li>
+                            <li>Mengetik pesan "Halo Kak, mau tanya harga botol A".</li>
+                        </ol>
+                        <p>
+                            <strong className="text-white/80">Setiap langkah ekstra adalah peluang *Drop Off* (pelanggan batal membeli).</strong> Sistem kami memangkas 4 langkah menyiksa ini menjadi <strong className="text-emerald-400">1 kali klik</strong>.
+                        </p>
+
+                        <h3 className="text-white text-2xl font-['Urbanist'] mt-10 mb-4 tracking-tight">Keranjang Belanja Langsung ke Chat (*Abandoned Cart Killer*)</h3>
+                        <p>
+                            Untuk toko online skala besar, tombol WhatsApp sekadar untuk "tanya-tanya" tidak efisien. Di *BangBisnis*, kami merancang integrasi level *e-commerce*:
+                        </p>
+                        <p>
+                            Pembeli bisa menekan tombol "Beli via WA" di halaman produk, dan seketika aplikasi WhatsApp mereka akan terbuka dengan teks pesan yang sudah terotomatisasi secara cantik membawa nama produk, varian ukuran, hingga kode SKU. Admin Anda tidak perlu repot menebak apa yang ditanyakan pelanggan, dan pesanan bisa langsung direkap.
+                        </p>
                     </div>
                 </div>
 

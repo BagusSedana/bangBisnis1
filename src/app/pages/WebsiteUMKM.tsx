@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, MessageCircle, Store, MapPin, ScanHeart, Headphones } from "lucide-react";
+import { ArrowRight, MessageCircle, Store, MapPin, ScanHeart, Headphones, BookOpen } from "lucide-react";
 import { Link } from "react-router";
 import { useEffect } from "react";
 
@@ -111,6 +111,40 @@ export function WebsiteUMKM() {
                                 <p className="text-white/40 text-[0.9rem] leading-relaxed">{item.desc}</p>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+
+                {/* Deep-Dive Article Section */}
+                <div className="mt-32 pt-20 border-t border-white/[0.06] max-w-4xl mx-auto">
+                    <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-[10px] tracking-[0.15em] uppercase">
+                        <BookOpen size={14} /> BangBisnis Insights
+                    </div>
+                    <h2 className="text-white text-3xl md:text-4xl mb-8 font-['Urbanist'] leading-tight tracking-tight">
+                        Panduan Transformasi Digital UMKM Bali: Dari Offline ke <span className="text-emerald-400 italic">Dominasi Google Maps</span>
+                    </h2>
+
+                    <div className="space-y-6 text-white/50 text-[1.05rem] leading-relaxed font-light">
+                        <p>
+                            Banyak pelaku UMKM di Bali yang frustrasi; produk mereka bagus, harga kompetitif, restoran mereka memiliki resep rahasia keluarga, tetapi toko tetap sepi. Sementara itu, kafe kompetitor yang rasanya biasa saja justru antre panjang karena diulas oleh bule di Google Maps. Inilah kenyataan bisnis modern: <strong className="text-white/80 font-medium">Kualitas produk Anda tidak penting jika tidak ada yang tahu Anda ada.</strong>
+                        </p>
+
+                        <h3 className="text-white text-2xl font-['Urbanist'] mt-10 mb-4 tracking-tight">Menggeser Paradigma "Sosial Media Saja Cukup"</h3>
+                        <p>
+                            Instagram dan TikTok memang bagus untuk menjaring <i>brand awareness</i>. Akan tetapi, ketika seorang turis sedang lapar di Canggu pada pukul 7 malam, mereka tidak akan membuka TikTok. Mereka membuka Google dan mengetik: <i>"Best local warung near me"</i> atau <i>"Seafood in Jimbaran"</i>.
+                        </p>
+                        <p>
+                            Platform sosial media bersifat impulsif (orang sekadar melihat-lihat). Sedangkan <strong>Mesin Pencari (Google)</strong> berorientasi pada intensi (orang memang sedang mencari solusi/ingin merealisasikan pembelian). Jika UMKM Anda hanya hidup di Instagram dan tidak memiliki website yang terindeks Google khusus lokal, Anda kehilangan 80% calon pelanggan *high-intent* ini.
+                        </p>
+
+                        <h3 className="text-white text-2xl font-['Urbanist'] mt-10 mb-4 tracking-tight">Senjata Rahasia Kami: Local SEO</h3>
+                        <p>
+                            Membangun website untuk UMKM bukanlah sekadar menaruh foto produk di internet. BangBisnis menggunakan strategi khusus:
+                        </p>
+                        <ul className="list-disc pl-5 space-y-3 mt-4 text-white/60 text-[0.95rem]">
+                            <li><strong className="text-white/80">Optimasi Kata Kunci Hiper-Lokal:</strong> Kami menargetkan kata kunci mutlak seperti "Sewa Motor Murah Seminyak" bukan hanya "Sewa Motor", agar Anda tidak bersaing dengan raksasa nasional, melainkan merajai kota Anda sendiri.</li>
+                            <li><strong className="text-white/80">Integrasi Google Business Profile:</strong> Kami mengawinkan website Anda dengan titik Google Maps. Setiap ulasan baru, foto produk, dan artikel yang kita masukkan akan mengangkat ranking peta Anda naik di atas kompetitor tetangga.</li>
+                            <li><strong className="text-white/80">Tampilan Mobile-First:</strong> 92% turis di Bali mencari makan dan layanan lewat layar HP sambil berjalan atau di atas motor. Website ringan yang pas di genggaman, dengan tombol klik-ke-Gojek atau WhatsApp adalah keharusan.</li>
+                        </ul>
                     </div>
                 </div>
 

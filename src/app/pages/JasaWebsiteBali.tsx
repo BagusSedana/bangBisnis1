@@ -103,32 +103,29 @@ export function JasaWebsiteBali() {
                         className="text-white mb-6"
                         style={{
                             fontFamily: "'Urbanist', sans-serif",
-                            fontSize: "clamp(2.2rem, 6vw, 4.5rem)",
+                            fontSize: "clamp(2.5rem, 6vw, 5rem)",
                             lineHeight: 1.05,
                             letterSpacing: "-0.04em",
                         }}
                     >
-                        Jasa Pembuatan{" "}
-                        <span className="italic text-white/40">Website Profesional</span>
+                        Toko Sebelah <span className="italic text-white/40">Lebih Ramai</span>
                         <br />
-                        <span className="text-emerald-500">di Bali</span> untuk UMKM
+                        Karena Mereka Punya <span className="text-emerald-500">Website.</span>
                     </h1>
 
                     <p
-                        className="text-white/35 mb-10 max-w-xl"
-                        style={{ fontSize: "1rem", lineHeight: 1.85 }}
+                        className="text-white/40 mb-10 max-w-xl text-[1.05rem]"
+                        style={{ lineHeight: 1.85 }}
                     >
-                        Kami membantu UMKM di Bali membangun kehadiran online yang kredibel
-                        dan profesional. Proses terstruktur, desain minimalis, komunikasi
-                        transparan — selesai dalam <span className="text-white/60">7–14 hari</span>.
+                        Berapa banyak turis asing dan klien lokal yang lepas ke tangan kompetitor hanya karena nama bisnis Anda tidak muncul di Google? Kami membangun aset digital bernilai tinggi untuk UMKM Bali yang ingin mendominasi pasar, bukan sekadar "punya website".
                     </p>
 
                     <div className="flex flex-wrap gap-3 mb-10">
                         {[
-                            "✓ Proses terstruktur",
-                            "✓ Desain minimalis & profesional",
-                            "✓ Komunikasi transparan",
-                            "✓ Support pasca-launch",
+                            "✓ Dirancang untuk Konversi",
+                            "✓ Optimasi SEO Lokal Bali",
+                            "✓ Bebas Pusing Teknis",
+                            "✓ Langsung Terhubung ke WhatsApp",
                         ].map((t) => (
                             <span
                                 key={t}
@@ -168,6 +165,32 @@ export function JasaWebsiteBali() {
                         </Link>
                     </div>
                 </motion.div>
+            </section>
+
+            {/* Pain Agitation Section */}
+            <section className="py-20 bg-[#0a0a0a]">
+                <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-emerald-950/20 border border-emerald-500/20 rounded-[2rem] p-8 md:p-14 relative overflow-hidden"
+                    >
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full mix-blend-screen" />
+                        <div className="relative z-10 max-w-3xl">
+                            <span className="text-emerald-400 text-[11px] tracking-[0.2em] uppercase font-bold mb-4 block">Fakta Lapangan</span>
+                            <h2 className="text-white text-3xl md:text-5xl mb-6" style={{ fontFamily: "'Urbanist', sans-serif", letterSpacing: "-0.02em", lineHeight: 1.1 }}>
+                                Mengandalkan Instagram Saja <span className="italic text-emerald-400">Tidak Cukup</span> di 2026.
+                            </h2>
+                            <p className="text-white/50 text-[1.05rem] leading-relaxed mb-6">
+                                Wisatawan asing dan klien korporat B2B tidak mencari vendor lewat feed Instagram. Mereka mencari solusi lewat pencarian Google ("Villa terbaik di Canggu", "Distributor Kopi Denpasar", "Jasa Arsitek Bali").
+                            </p>
+                            <p className="text-white/50 text-[1.05rem] leading-relaxed">
+                                Jika bisnis Anda tidak memiliki "Rumah Digital" resmi yang kredibel saat diketik di Google, mereka akan menganggap bisnis Anda amatir. <strong className="text-white/80">Website bukan lagi biaya pengeluaran, melainkan tenaga sales 24 jam yang paling murah.</strong>
+                            </p>
+                        </div>
+                    </motion.div>
+                </div>
             </section>
 
             {/* Jenis UMKM yang Kami Layani */}
@@ -250,26 +273,23 @@ export function JasaWebsiteBali() {
                                     lineHeight: 1.1,
                                 }}
                             >
-                                Bukan sekadar{" "}
-                                <span className="italic text-[#bbb]">tukang bikin</span>
+                                Berhenti Bakar Uang Untuk <span className="italic text-[#bbb]">Website Pajangan</span>
                             </h2>
                             <p className="text-[#777] leading-relaxed mb-8 text-[0.9rem]">
-                                Jasa website Bali banyak. Yang membedakan kami adalah pendekatan
-                                berbasis bisnis — kami memahami kebutuhan UMKM Bali lebih dulu,
-                                baru merancang solusi digital yang tepat sasaran.
+                                Banyak jasa website Bali hanya bertindak sebagai "tukang ketik kode". Mereka membuatkan desain yang cantik namun miskin nilai jual. Kami memposisikan diri sebagai konsultan marketing digital Anda: memahami target pasar Anda terlebih dahulu, baru merancang strategi websitenya.
                             </p>
 
                             <ul className="space-y-4">
                                 {[
-                                    "Analisis bisnis sebelum design dimulai",
-                                    "Struktur konten yang mendorong konversi",
-                                    "Desain minimalis & profesional",
-                                    "Website siap sebelum diluncurkan — tanpa pengecualian",
-                                    "Support pasca-launch untuk ketenangan pikiran Anda",
+                                    "Struktur Copywriting yang Menekan Tombol Emosi Pembeli",
+                                    "Arsitektur SEO yang Dirancang Ramah Mesin Pencari Google",
+                                    "Kecepatan Muat (Loading) Kilat Agar Mencegah Pengunjung Kabur",
+                                    "Desain Antarmuka Eksklusif, Langsung Membangun Kepercayaan Klien",
+                                    "Garansi Bimbingan Sampai Anda Bisa Mengoperasikannya Mandiri",
                                 ].map((item) => (
                                     <li key={item} className="flex items-start gap-3">
-                                        <Check size={15} className="text-emerald-500 flex-shrink-0 mt-0.5" />
-                                        <span className="text-[#666] text-[0.88rem] leading-snug">{item}</span>
+                                        <Check size={16} className="text-emerald-500 flex-shrink-0 mt-0.5" strokeWidth={3} />
+                                        <span className="text-[#444] font-medium text-[0.9rem] leading-snug">{item}</span>
                                     </li>
                                 ))}
                             </ul>

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Check, ArrowRight, MessageCircle, Target, BarChart, MousePointerClick, TrendingUp } from "lucide-react";
+import { Check, ArrowRight, MessageCircle, Target, BarChart, MousePointerClick, TrendingUp, BookOpen } from "lucide-react";
 import { Link } from "react-router";
 import { useEffect } from "react";
 
@@ -111,6 +111,40 @@ export function LandingPage() {
                                 <p className="text-white/40 text-[0.9rem] leading-relaxed">{item.desc}</p>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+
+                {/* Deep-Dive Article Section */}
+                <div className="mt-32 pt-20 border-t border-white/[0.06] max-w-4xl mx-auto">
+                    <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-[10px] tracking-[0.15em] uppercase">
+                        <BookOpen size={14} /> BangBisnis Insights
+                    </div>
+                    <h2 className="text-white text-3xl md:text-4xl mb-8 font-['Urbanist'] leading-tight tracking-tight">
+                        Anatomi <span className="text-emerald-400 italic">Landing Page</span> Penghasil Konversi Tinggi di 2026
+                    </h2>
+
+                    <div className="space-y-6 text-white/50 text-[1.05rem] leading-relaxed font-light">
+                        <p>
+                            Menguasai Facebook Ads, Instagram Ads, atau Google Ads hanyalah separuh dari pertempuran. Anda bisa mendatangkan 10,000 klik ke website Anda, tapi jika 9,900 orang langsung menekan tombol "Back" (kembali) karena struktur <i>landing page</i> yang berantakan, maka Anda membuang anggaran pemasaran sia-sia.
+                        </p>
+
+                        <h3 className="text-white text-2xl font-['Urbanist'] mt-10 mb-4 tracking-tight">Mengapa Orang Beli? (Psikologi Konversi)</h3>
+                        <p>
+                            <i>Landing Page</i> yang sukses tidak dibuat berdasarkan <i>"feeling"</i> (perasaan) desain yang bagus. Ia diarsiteki berdasarkan psikologi pembelian manusia.
+                        </p>
+                        <ul className="list-disc pl-5 space-y-3 mt-4 text-white/60 text-[0.95rem]">
+                            <li><strong className="text-white/80">3 Detik Pertama (Attention):</strong> <i>Headline</i> (judul utama) harus secara akurat dan agresif menjawab pertanyaan di benak pembeli: "Apa untungnya ini buat saya?". Jika <i>headline</i> Anda hanya berkata "Selamat Datang di Toko Kami", Anda sudah gagal.</li>
+                            <li><strong className="text-white/80">Menggaruk Rasa Sakit (Pain Agitation):</strong> Pembeli tidak peduli dengan fitur spesifikasi produk Anda. Mereka peduli pada masalah yang sedang mereka alami. Kami merancang <i>copywriting</i> yang mendemonstrasikan bahwa *Anda mengerti beban mereka*.</li>
+                            <li><strong className="text-white/80">Penyajian Solusi & Bukti Sosial:</strong> Setelah mereka setuju bahwa mereka memiliki masalah, barulah kami menyodorkan produk Anda sebagai solusi absolut—didukung oleh testimoni riil (bukan <i>fake reviews</i>) untuk meredam rasa skeptis.</li>
+                        </ul>
+
+                        <h3 className="text-white text-2xl font-['Urbanist'] mt-10 mb-4 tracking-tight">Perang Melawan Kinerja Muat (Loading Speed)</h3>
+                        <p>
+                            Tahukah Anda bahwa *Bounce Rate* (rasio pengunjung yang langsung kabur) meningkat sebesar 32% setiap penambahan detik saat website *loading*? Pengguna TikTok dan Instagram memiliki rentang perhatian yang sangat pendek.
+                        </p>
+                        <p>
+                            Itulah sebabnya tim BangBisnis tidak menggunakan pembangun halaman (<i>page builder</i>) murahan yang sarat dengan kode sampah. Kami menggunakan teknologi pengembangan web modern, memastikan <i>Landing Page</i> meledak tampil seketika (dibawah 1.5 detik) bahkan dalam koneksi seluler di Bali yang terkadang kurang stabil.
+                        </p>
                     </div>
                 </div>
 
